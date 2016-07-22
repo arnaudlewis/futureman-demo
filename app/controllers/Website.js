@@ -4,16 +4,7 @@ import Error from '../utils/Error'
 
 export default {
   index(req, res){
-    Prismic.api(req, res)
-      .then((api) => {
-        api.getByUID("demo", "demo-page")
-          .then((doc) => {
-            console.log(doc)
-            res.render('index', {'doc': doc})
-          })
-          .catch((err) => res.redirect(Router.notFound))
-        })
-      .catch((err) => Error.handle(err, req, res))
+    res.render('index')
   },
 
   page(req, res){
