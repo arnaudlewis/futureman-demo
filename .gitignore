@@ -16,4 +16,5 @@ node_modules
 
 .idea
 
-app/conf/prismic-configuration.js
+./app/conf/prismic-configuration.js
+./dist/conf/prismic-configuration.js
