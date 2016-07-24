@@ -13,7 +13,6 @@ exports.default = function (app) {
 
   //standard routes
   app.route(_Router2.default.index).get(_Website2.default.index);
-  app.route(_Router2.default.page(':uid')).get(_Website2.default.page);
 
   //handle route not found
   app.route(_Router2.default.all).get(_Website2.default.notFound);

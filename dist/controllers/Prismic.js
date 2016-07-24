@@ -26,8 +26,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // This function will be used to generate links to Prismic.io documents
 // As your project grows, you should update this function according to your routes
 function linkResolver(doc, ctx) {
-  if (doc.uid === 'demo-page') return _Router2.default.index;
-  if (doc.type === 'demo') return _Router2.default.page(doc.uid);else return _Router2.default.notFound;
+  if (doc.uid === 'home') return _Router2.default.index;else return _Router2.default.notFound;
 }
 
 function initCtx(req, res, next) {

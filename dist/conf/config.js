@@ -49,7 +49,7 @@ exports.default = function () {
   app.set('port', process.env.PORT || 3000);
   app.set('views', _path2.default.join(__dirname, '../../views'));
   app.set('view engine', 'pug');
-  app.use((0, _serveFavicon2.default)("public/img/punch.png"));
+  app.use((0, _serveFavicon2.default)("public/img/fm-icon.png"));
   app.use((0, _morgan2.default)('dev'));
   app.use((0, _bodyParser2.default)());
   app.use((0, _methodOverride2.default)());

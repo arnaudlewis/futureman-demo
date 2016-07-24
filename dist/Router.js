@@ -5,7 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = {
   index: '/',
-
   notFound: '/not-found',
   //prismic preview
   preview: '/preview',
