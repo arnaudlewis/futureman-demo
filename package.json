@@ -3,9 +3,9 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./app/app.js",
-    "watch": "babel-watch app/app.js -w ./app/",
-    "watch-sass": "nodemon -e sass -x \"npm run build-sass\""
+    "start": "babel-watch app/app.js -w ./app/",
+    "build": "babel ./app/ -d dist",
+    "serve": "node dist/app.js"
   },
   "dependencies": {
     "body-parser": "~1.0.0",

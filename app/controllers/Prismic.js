@@ -1,6 +1,6 @@
 import Error from '../utils/Error'
 import Prismic from 'prismic.io'
-import configuration from '../../conf/prismic-configuration'
+import configuration from '../conf/prismic-configuration'
 import Router from '../Router'
 
 // -- Links resolution rules

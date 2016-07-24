@@ -1,4 +1,4 @@
-import app from '../conf/config'
+import app from './conf/config'
 const PORT = app.get('port')
 
 app.listen(PORT, function() {
