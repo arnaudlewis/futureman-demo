@@ -510,10 +510,6 @@ $(document).ready(function() {
 
 
 
-
-
-
-
     //Menu system
     //Position menu background and other misc.
     function menu_scroll_position() {
@@ -884,7 +880,7 @@ $(document).ready(function() {
             "align": "centerXY",
             "width": 1280,
             "height": 720,
-            "path": "assets/media/",
+            "path": "http://futuremandigital.com/assets/media/",
             "filename": "elevator",
             "types": ["mp4", "ogg", "webm"]
         });

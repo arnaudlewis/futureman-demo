@@ -301,12 +301,7 @@ block body
       .container-fluid
         .row
           #elevator.col-sm-12
-            video#video_background(preload='auto', autoplay='autoplay', loop='true', style='position: fixed; top: 0px; left: -249px; bottom: 0px; right: 0px; z-index: -100; width: 1619.56px; height: 911px;')
-              source(src='assets/media/elevator.mp4', type='video/mp4')
-              source(src='assets/media/elevator.ogg', type='video/ogg')
-              source(src='assets/media/elevator.webm', type='video/webm')
-              | bgvideo
-            .video
+            //dynamically loaded from frontend.js line 883
             .activate(style='height: 950px;')
               .buttons
                 a.elevator_pitch(data-vimeo='107752817')
