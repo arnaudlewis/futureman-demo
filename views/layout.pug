@@ -8,7 +8,9 @@ head
   meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
   title Futureman Digital | Design + Interactive + Production
   link(rel="stylesheet", type="text/css", href="/css/frontend.css")
+  link(rel="stylesheet", type="text/css", href="/css/custom.css")
   script(src="/js/modernizr-respond.min.js")
+  script(src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous")
   script(src="/js/snap.min.js")
   script
     = ctx?"window.prismic = { endpoint: '" + ctx.endpoint + "' };":""

@@ -1,0 +1,18 @@
+.wio-link {
+  bottom: 20px;
+  left: 20px;
+  position: fixed;
+  z-index: 10000;
+  background-color: white!important;
+  width: 40px!important;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #282f35;
+}
+
+.wio-link img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0)
+}
