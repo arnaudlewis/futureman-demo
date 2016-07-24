@@ -7,8 +7,7 @@ import Router from '../Router'
 // This function will be used to generate links to Prismic.io documents
 // As your project grows, you should update this function according to your routes
 function linkResolver (doc, ctx) {
-  if(doc.uid === 'demo-page') return Router.index
-  if (doc.type === 'demo') return Router.page(doc.uid)
+  if(doc.uid === 'home') return Router.index
   else return Router.notFound
 }
 

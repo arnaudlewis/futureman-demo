@@ -18,7 +18,7 @@ export default (function() {
   app.set('port', process.env.PORT || 3000)
   app.set('views', path.join(__dirname, '../../views'))
   app.set('view engine', 'pug')
-  app.use(favicon("public/img/punch.png"))
+  app.use(favicon("public/img/fm-icon.png"))
   app.use(logger('dev'))
   app.use(bodyParser())
   app.use(methodOverride())

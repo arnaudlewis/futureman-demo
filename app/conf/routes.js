@@ -11,7 +11,6 @@ export default function (app) {
 
   //standard routes
   app.route(Router.index).get(Website.index)
-  app.route(Router.page(':uid')).get(Website.page)
 
   //handle route not found
   app.route(Router.all).get(Website.notFound)

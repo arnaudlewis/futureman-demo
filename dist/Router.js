@@ -5,9 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = {
   index: '/',
-  page: function page(uid) {
-    return '/page/' + uid;
-  },
 
   notFound: '/not-found',
   //prismic preview
