@@ -711,8 +711,6 @@ $(document).ready(function() {
         current_index = $('div.active').index() + 1; //Current
         future_index = $('div.active').index() + 2;
 
-        console.log('total items: ' + total_items);
-
         if (future_index > total_items) {
             future_index = 1;
         }
