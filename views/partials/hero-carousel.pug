@@ -31,7 +31,7 @@ section.hero
 
             .headline(class='item_'+slideCount + " " + slideCountText + " " + hiddenClass)
               p !{slide.getText('subTitle')}
-              h3 !{slide.getText('title')}
+              != slide.getStructuredText('title').asHtml(ctx.linkResolver)
               
               - var linkURL = "#"
               if slide.getLink('link') != null
