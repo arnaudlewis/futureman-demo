@@ -1,0 +1,54 @@
+- var contactModal = slice.value.toArray()[0]
+a.hidden-xs(href='/#', data-toggle='modal', data-target='#contactus_modal')
+  .lets-work !{contactModal.getText('buttonText')}
+    hr
+#contactus_modal.modal(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-body
+        .contact-header(style='background-image: url(' + contactModal.getImage('headerImage').url + ');')
+          h3 !{contactModal.getText('headerText')}
+        .row.contact-us
+          .col-sm-12
+            form#frm-contact-modal.frm-contact(method='POST', action='http://futuremandigital.com/', accept-charset='UTF-8')
+              input(name='_token', type='hidden', value='tAUNPhE6OK7Pmy8DefBbfKoX6rh3VxHT5ZtOlXSb')
+              .row
+                .col-xs-12.col-sm-6
+                  input#name.form-control(placeholder='Name*', name='name', type='text')
+                .col-xs-12.col-sm-6
+                  input#email.form-control(placeholder='Email*', name='email', type='text')
+              .row
+                .col-xs-12.col-sm-6
+                  input#phone.form-control(placeholder='Phone*', name='phone', type='text')
+                .col-xs-12.col-sm-6
+                  select#about.form-control(name='about', style='display: none;')
+                    option(value='0', selected='selected') I'm interested in
+                    option(value='1') Projects
+                    option(value='2') Employment
+                    .dropdown-menu.open
+                      ul.dropdown-menu.inner(role='menu')
+                        li.selected(data-original-index='0')
+                          a(tabindex='0', data-normalized-text='<span class="text">I\'m interested in</span>', data-tokens='null')
+                            span.text I'm interested in
+                            span.glyphicon.glyphicon-ok.check-mark
+                        li(data-original-index='1')
+                          a(tabindex='0', data-normalized-text='<span class="text">Projects</span>', data-tokens='null')
+                            span.text Projects
+                            span.glyphicon.glyphicon-ok.check-mark
+                        li(data-original-index='2')
+                          a(tabindex='0', data-normalized-text='<span class="text">Employment</span>', data-tokens='null')
+                            span.text Employment
+                            span.glyphicon.glyphicon-ok.check-mark
+              .row
+                .col-xs-12.col-sm-12
+                  textarea#message_entry.form-control(rows='5', placeholder='Message...', name='message_entry', cols='50')
+              .row
+                .col-xs-12.col-sm-8
+                  p.required *Required
+                .col-xs-12.col-sm-4
+                  button.btn.btn-submit.pull-right(type='submit')
+                    i —
+                    |  !{contactModal.getText('submitButtonText')}
+        .row.thank-you.hide
+          .col-sm-12
+            h4 !{contactModal.getText('submitText')}

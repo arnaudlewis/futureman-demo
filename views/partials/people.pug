@@ -1,0 +1,709 @@
+- var jameyBerry = slice.value.toArray()[0]
+- var peterBecker = slice.value.toArray()[1]
+- var justinEdwards = slice.value.toArray()[2]
+- var dillonBarenbrugge = slice.value.toArray()[3]
+- var peterHongisto = slice.value.toArray()[4]
+- var kevinOreilly = slice.value.toArray()[5]
+- var conradFuhrman = slice.value.toArray()[6]
+- var nolanMarketti = slice.value.toArray()[7]
+- var jackieBender = slice.value.toArray()[8]
+- var scottPorembski = slice.value.toArray()[9]
+
+section.people-1
+  .container-fluid.hidden-xs
+    .row
+      .col-xs-12.col-sm-8
+        .row
+          .crew.hidden-xs.col-sm-12.jamey_berry-pic(data-name='jamey_berry')
+            h4 !{jameyBerry.getText('firstName')} !{jameyBerry.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.jamey_berry-xs-image(data-name='jamey_berry-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=jameyBerry.getImage('image-l').url + ', ' + jameyBerry.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=jameyBerry.getImage('image-m').url + ', ' + jameyBerry.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=jameyBerry.getImage('image-s').url + ', ' + jameyBerry.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=jameyBerry.getImage('image-xs').url + ', ' + jameyBerry.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+          //if IE 9
+          img.img-responsive(src=jameyBerry.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+      .col-xs-12.col-sm-4
+        .row
+          .crew.hidden-xs.col-sm-12.peter_becker-pic(data-name='peter_becker')
+            h4 !{jameyBerry.getText('firstName')} !{jameyBerry.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.peter_becker-xs-image(data-name='peter_becker-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=peterBecker.getImage('image-l').url + ', ' + peterBecker.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=peterBecker.getImage('image-m').url + ', ' + peterBecker.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=peterBecker.getImage('image-s').url + ', ' + peterBecker.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=peterBecker.getImage('image-xs').url + ', ' + peterBecker.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+          //if IE 9
+          img.img-responsive(src=peterBecker.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+    .row
+      .row.crew-detail.jamey_berry
+        .col-sm-5.col-md-4.col-lg-3
+          picture
+            //if IE 9
+              video(style='display: none;')
+            source(srcset=jameyBerry.getImage('profileImage').url + ', ' + jameyBerry.getImage('profileImage').url + ' 2x')
+            //if IE 9
+            img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+        .col-sm-7.col-md-8.col-lg-9
+          a(href='#jamey_berry')
+          a.crew-close(href='http://futuremandigital.com/#', data-name='jamey_berry')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          .crew-content
+            h4.name 
+              != jameyBerry.getText('firstName')
+              span.red + 
+              != jameyBerry.getText('lastName')
+            != jameyBerry.getStructuredText('profileText').asHtml(ctx.linkResolver)
+
+      .row.crew-detail.peter_becker
+        .col-sm-5.col-md-4.col-lg-3
+          picture
+            //if IE 9
+              video(style='display: none;')
+            source(srcset=peterBecker.getImage('profileImage').url + ', ' + peterBecker.getImage('profileImage').url + ' 2x')
+            //if IE 9
+            img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+        .col-sm-7.col-md-8.col-lg-9
+          a(href='#peter_becker')
+          a.crew-close(href='http://futuremandigital.com/#', data-name='peter_becker')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          .crew-content
+            h4.name
+              != peterBecker.getText('firstName')
+              span.red + 
+              != peterBecker.getText('lastName')
+            != peterBecker.getStructuredText('profileText').asHtml(ctx.linkResolver)
+
+    .row
+      .col-xs-12.col-sm-6
+        .row
+          .crew.hidden-xs.col-sm-12.justin_edwards-pic(data-name='justin_edwards')
+            h4 !{justinEdwards.getText('firstName')} !{justinEdwards.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.justin_edwards-xs-image(data-name='justin_edwards-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=justinEdwards.getImage('image-l').url + ', ' + justinEdwards.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=justinEdwards.getImage('image-m').url + ', ' + justinEdwards.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=justinEdwards.getImage('image-s').url + ', ' + justinEdwards.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=justinEdwards.getImage('image-xs').url + ', ' + justinEdwards.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+          //if IE 9
+          img.img-responsive(src=justinEdwards.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+      .col-xs-12.col-sm-6
+        .row
+          .crew.hidden-xs.col-sm-12.dillon_barenbrugge-pic(data-name='dillon_barenbrugge')
+            h4 !{dillonBarenbrugge.getText('firstName')} !{dillonBarenbrugge.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.dillon_barenbrugge-xs-image(data-name='dillon_barenbrugge-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=dillonBarenbrugge.getImage('image-l').url + ', ' + dillonBarenbrugge.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=dillonBarenbrugge.getImage('image-m').url + ', ' + dillonBarenbrugge.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=dillonBarenbrugge.getImage('image-s').url + ', ' + dillonBarenbrugge.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=dillonBarenbrugge.getImage('image-xs').url + ', ' + dillonBarenbrugge.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+          //if IE 9
+          img.img-responsive(src=dillonBarenbrugge.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+    .row
+      .row.crew-detail.justin_edwards
+        .col-sm-5.col-md-4.col-lg-3
+          picture
+            //if IE 9
+              video(style='display: none;')
+            source(srcset=justinEdwards.getImage('profileImage').url + ', ' + justinEdwards.getImage('profileImage').url + ' 2x')
+            //if IE 9
+            img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+        .col-sm-7.col-md-8.col-lg-9
+          a(href='#justin_edwards')
+          a.crew-close(href='http://futuremandigital.com/#', data-name='justin_edwards')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          .crew-content
+            h4.name 
+              != justinEdwards.getText('firstName')
+              span.red + 
+              != justinEdwards.getText('lastName')
+            != justinEdwards.getStructuredText('profileText').asHtml(ctx.linkResolver)
+
+      .row.crew-detail.dillon_barenbrugge
+        .col-sm-5.col-md-4.col-lg-3
+          picture
+            //if IE 9
+              video(style='display: none;')
+            source(srcset=dillonBarenbrugge.getImage('profileImage').url + ', ' + dillonBarenbrugge.getImage('profileImage').url + ' 2x')
+            //if IE 9
+            img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+        .col-sm-7.col-md-8.col-lg-9
+          a(href='#dillon_barenbrugge')
+          a.crew-close(href='http://futuremandigital.com/#', data-name='dillon_barenbrugge')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          .crew-content
+            h4.name 
+              != dillonBarenbrugge.getText('firstName')
+              span.red + 
+              != dillonBarenbrugge.getText('lastName')
+            != dillonBarenbrugge.getStructuredText('profileText').asHtml(ctx.linkResolver)
+
+    .row
+      .col-xs-12.col-sm-5
+        .row
+          .crew.hidden-xs.col-sm-12.peter_hongisto-pic(data-name='peter_hongisto')
+            h4 !{peterHongisto.getText('firstName')} !{peterHongisto.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.peter_hongisto-xs-image(data-name='peter_hongisto-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=peterHongisto.getImage('image-l').url + ', ' + peterHongisto.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=peterHongisto.getImage('image-m').url + ', ' + peterHongisto.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=peterHongisto.getImage('image-s').url + ', ' + peterHongisto.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=peterHongisto.getImage('image-xs').url + ', ' + peterHongisto.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+          //if IE 9
+          img.img-responsive(src=peterHongisto.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+      .col-xs-12.col-sm-7
+        .row
+          .crew.hidden-xs.col-sm-12.kevin_o_reilly-pic(data-name='kevin_o_reilly')
+            h4 !{kevinOreilly.getText('firstName')} !{kevinOreilly.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.kevin_o_reilly-xs-image(data-name='kevin_o_reilly-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=kevinOreilly.getImage('image-l').url + ', ' + kevinOreilly.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=kevinOreilly.getImage('image-m').url + ', ' + kevinOreilly.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=kevinOreilly.getImage('image-s').url + ', ' + kevinOreilly.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=kevinOreilly.getImage('image-xs').url + ', ' + kevinOreilly.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+          //if IE 9
+          img.img-responsive(src=kevinOreilly.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+    .row
+      .row.crew-detail.peter_hongisto
+        .col-sm-5.col-md-4.col-lg-3
+          picture
+            //if IE 9
+              video(style='display: none;')
+            source(srcset=peterHongisto.getImage('profileImage').url + ', ' + peterHongisto.getImage('profileImage').url + ' 2x')
+            //if IE 9
+            img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+        .col-sm-7.col-md-8.col-lg-9
+          a(href='#peter_hongisto')
+          a.crew-close(href='http://futuremandigital.com/#', data-name='peter_hongisto')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          .crew-content
+            h4.name 
+              != peterHongisto.getText('firstName')
+              span.red + 
+              != peterHongisto.getText('lastName')
+            != peterHongisto.getStructuredText('profileText').asHtml(ctx.linkResolver)
+
+      .row.crew-detail.kevin_o_reilly
+        .col-sm-5.col-md-4.col-lg-3
+          picture
+            //if IE 9
+              video(style='display: none;')
+            source(srcset=kevinOreilly.getImage('profileImage').url + ', ' + kevinOreilly.getImage('profileImage').url + ' 2x')
+            //if IE 9
+            img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+        .col-sm-7.col-md-8.col-lg-9
+          a(href='#kevin_o_reilly')
+          a.crew-close(href='http://futuremandigital.com/#', data-name='kevin_o_reilly')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          .crew-content
+            h4.name 
+              != kevinOreilly.getText('firstName')
+              span.red + 
+              != kevinOreilly.getText('lastName')
+            != kevinOreilly.getStructuredText('profileText').asHtml(ctx.linkResolver)
+
+    .row
+      .col-xs-12.col-sm-6
+        .row
+          .crew.hidden-xs.col-sm-12.conrad_fuhrman-pic(data-name='conrad_fuhrman')
+            h4 !{conradFuhrman.getText('firstName')} !{conradFuhrman.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.conrad_fuhrman-xs-image(data-name='conrad_fuhrman-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=conradFuhrman.getImage('image-l').url + ', ' + conradFuhrman.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=conradFuhrman.getImage('image-m').url + ', ' + conradFuhrman.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=conradFuhrman.getImage('image-s').url + ', ' + conradFuhrman.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=conradFuhrman.getImage('image-xs').url + ', ' + conradFuhrman.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+          //if IE 9
+          img.img-responsive(src=conradFuhrman.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+      .col-xs-12.col-sm-6
+        .row
+          .crew.hidden-xs.col-sm-12.nolan_marketti-pic(data-name='nolan_marketti')
+            h4 !{nolanMarketti.getText('firstName')} !{nolanMarketti.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.nolan_marketti-xs-image(data-name='nolan_marketti-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=nolanMarketti.getImage('image-l').url + ', ' + nolanMarketti.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=nolanMarketti.getImage('image-m').url + ', ' + nolanMarketti.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=nolanMarketti.getImage('image-s').url + ', ' + nolanMarketti.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=nolanMarketti.getImage('image-xs').url + ', ' + nolanMarketti.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+          //if IE 9
+          img.img-responsive(src=nolanMarketti.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+    .row
+      .row.crew-detail.conrad_fuhrman
+        .col-sm-5.col-md-4.col-lg-3
+          picture
+            //if IE 9
+              video(style='display: none;')
+            source(srcset=conradFuhrman.getImage('profileImage').url + ', ' + conradFuhrman.getImage('profileImage').url + ' 2x')
+            //if IE 9
+            img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+        .col-sm-7.col-md-8.col-lg-9
+          a(href='#conrad_fuhrman')
+          a.crew-close(href='http://futuremandigital.com/#', data-name='conrad_fuhrman')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          .crew-content
+            h4.name 
+              != conradFuhrman.getText('firstName')
+              span.red + 
+              != conradFuhrman.getText('lastName')
+            != conradFuhrman.getStructuredText('profileText').asHtml(ctx.linkResolver)
+
+      .row.crew-detail.nolan_marketti
+        .col-sm-5.col-md-4.col-lg-3
+          picture
+            //if IE 9
+              video(style='display: none;')
+            source(srcset=nolanMarketti.getImage('profileImage').url + ', ' + nolanMarketti.getImage('profileImage').url + ' 2x')
+            //if IE 9
+            img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+        .col-sm-7.col-md-8.col-lg-9
+          a(href='#nolan_marketti')
+          a.crew-close(href='http://futuremandigital.com/#', data-name='nolan_marketti')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          .crew-content
+            h4.name 
+              != nolanMarketti.getText('firstName')
+              span.red + 
+              != nolanMarketti.getText('lastName')
+            != nolanMarketti.getStructuredText('profileText').asHtml(ctx.linkResolver)
+
+    .row
+      .col-xs-12.col-sm-7
+        .row
+          .crew.hidden-xs.col-sm-12.jackie_bender-pic(data-name='jackie_bender')
+            h4 !{jackieBender.getText('firstName')} !{jackieBender.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.jackie_bender-xs-image(data-name='jackie_bender-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=jackieBender.getImage('image-l').url + ', ' + jackieBender.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=jackieBender.getImage('image-m').url + ', ' + jackieBender.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=jackieBender.getImage('image-s').url + ', ' + jackieBender.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=jackieBender.getImage('image-xs').url + ', ' + jackieBender.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+          //if IE 9
+          img.img-responsive(src=jackieBender.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+      .col-xs-12.col-sm-5
+        .row
+          .crew.hidden-xs.col-sm-12.scott_porembski-pic(data-name='scott_porembski')
+            h4 !{scottPorembski.getText('firstName')} !{scottPorembski.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.scott_porembski-xs-image(data-name='scott_porembski-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=scottPorembski.getImage('image-l').url + ', ' + scottPorembski.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=scottPorembski.getImage('image-m').url + ', ' + scottPorembski.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=scottPorembski.getImage('image-s').url + ', ' + scottPorembski.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=scottPorembski.getImage('image-xs').url + ', ' + scottPorembski.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+          //if IE 9
+          img.img-responsive(src=scottPorembski.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+    .row
+      .row.crew-detail.jackie_bender
+        .col-sm-5.col-md-4.col-lg-3
+          picture
+            //if IE 9
+              video(style='display: none;')
+            source(srcset=jackieBender.getImage('profileImage').url + ', ' + jackieBender.getImage('profileImage').url + ' 2x')
+            //if IE 9
+            img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+        .col-sm-7.col-md-8.col-lg-9
+          a(href='#jackie_bender')
+          a.crew-close(href='http://futuremandigital.com/#', data-name='jackie_bender')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          .crew-content
+            h4.name 
+              != jackieBender.getText('firstName')
+              span.red + 
+              != jackieBender.getText('lastName')
+            != jackieBender.getStructuredText('profileText').asHtml(ctx.linkResolver)
+
+      .row.crew-detail.scott_porembski
+        .col-sm-5.col-md-4.col-lg-3
+          picture
+            //if IE 9
+              video(style='display: none;')
+            source(srcset=scottPorembski.getImage('profileImage').url + ', ' + scottPorembski.getImage('profileImage').url + ' 2x')
+            //if IE 9
+            img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+        .col-sm-7.col-md-8.col-lg-9
+          a(href='#scott_porembski')
+          a.crew-close(href='http://futuremandigital.com/#', data-name='scott_porembski')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          .crew-content
+            h4.name 
+              != scottPorembski.getText('firstName')
+              span.red + 
+              != scottPorembski.getText('lastName')
+            != scottPorembski.getStructuredText('profileText').asHtml(ctx.linkResolver)
+
+    .row
+    .row
+      .col-sm-12
+        img.img-responsive(src='/img/office.jpg', style='border-bottom: 1px solid white;')
+  .container-fluid.visible-xs-block
+    .row
+      .col-xs-12.col-sm-8
+        .row
+          .crew.hidden-xs.col-sm-12.jamey_berry-pic(data-name='jamey_berry')
+            h4 !{jameyBerry.getText('firstName')} !{jameyBerry.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.jamey_berry-xs-image(data-name='jamey_berry-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=jameyBerry.getImage('image-l').url + ', ' + jameyBerry.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=jameyBerry.getImage('image-m').url + ', ' + jameyBerry.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=jameyBerry.getImage('image-s').url + ', ' + jameyBerry.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=jameyBerry.getImage('image-xs').url + ', ' + jameyBerry.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+
+          //if IE 9
+          img.img-responsive(src=jameyBerry.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+      .row.crew-detail-xs.hidden-sm.jamey_berry-xs
+        .col-xs-10.col-xs-offset-1
+          a(href='#jamey_berry-xs')
+          a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='jamey_berry-xs')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          h4.name 
+            != jameyBerry.getText('firstName')
+            span.red + 
+            != jameyBerry.getText('lastName')
+          != jameyBerry.getStructuredText('profileText').asHtml(ctx.linkResolver)
+
+      .col-xs-12.col-sm-4
+        .row
+          .crew.hidden-xs.col-sm-12.peter_becker-pic(data-name='peter_becker')
+            h4 !{peterBecker.getText('firstName')} !{peterBecker.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.peter_becker-xs-image(data-name='peter_becker-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=peterBecker.getImage('image-l').url + ', ' + peterBecker.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=peterBecker.getImage('image-m').url + ', ' + peterBecker.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=peterBecker.getImage('image-s').url + ', ' + peterBecker.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=peterBecker.getImage('image-xs').url + ', ' + peterBecker.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+          //if IE 9
+          img.img-responsive(src=peterBecker.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+      .row.crew-detail-xs.hidden-sm.peter_becker-xs
+        .col-xs-10.col-xs-offset-1
+          a(href='#peter_becker-xs')
+          a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='peter_becker-xs')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          h4.name 
+            != peterBecker.getText('firstName')
+            span.red + 
+            != peterBecker.getText('lastName')
+          != peterBecker.getStructuredText('profileText').asHtml(ctx.linkResolver)
+
+      .col-xs-12.col-sm-6
+        .row
+          .crew.hidden-xs.col-sm-12.justin_edwards-pic(data-name='justin_edwards')
+            h4 !{justinEdwards.getText('firstName')} !{justinEdwards.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.justin_edwards-xs-image(data-name='justin_edwards-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=justinEdwards.getImage('image-l').url + ', ' + justinEdwards.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=justinEdwards.getImage('image-m').url + ', ' + justinEdwards.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=justinEdwards.getImage('image-s').url + ', ' + justinEdwards.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=justinEdwards.getImage('image-xs').url + ', ' + justinEdwards.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+          //if IE 9
+          img.img-responsive(src=justinEdwards.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+      .row.crew-detail-xs.hidden-sm.justin_edwards-xs
+        .col-xs-10.col-xs-offset-1
+          a(href='#justin_edwards-xs')
+          a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='justin_edwards-xs')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          h4.name 
+            != justinEdwards.getText('firstName')
+            span.red + 
+            != justinEdwards.getText('lastName')
+          != justinEdwards.getStructuredText('profileText').asHtml(ctx.linkResolver)
+
+      .col-xs-12.col-sm-6
+        .row
+          .crew.hidden-xs.col-sm-12.dillon_barenbrugge-pic(data-name='dillon_barenbrugge')
+            h4 !{dillonBarenbrugge.getText('firstName')} !{dillonBarenbrugge.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.dillon_barenbrugge-xs-image(data-name='dillon_barenbrugge-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=dillonBarenbrugge.getImage('image-l').url + ', ' + dillonBarenbrugge.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=dillonBarenbrugge.getImage('image-m').url + ', ' + dillonBarenbrugge.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=dillonBarenbrugge.getImage('image-s').url + ', ' + dillonBarenbrugge.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=dillonBarenbrugge.getImage('image-xs').url + ', ' + dillonBarenbrugge.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+          //if IE 9
+          img.img-responsive(src=dillonBarenbrugge.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+      .row.crew-detail-xs.hidden-sm.dillon_barenbrugge-xs
+        .col-xs-10.col-xs-offset-1
+          a(href='#dillon_barenbrugge-xs')
+          a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='dillon_barenbrugge-xs')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          h4.name 
+            != dillonBarenbrugge.getText('firstName')
+            span.red + 
+            != dillonBarenbrugge.getText('lastName')
+          != dillonBarenbrugge.getStructuredText('profileText').asHtml(ctx.linkResolver)
+
+      .col-xs-12.col-sm-5
+        .row
+          .crew.hidden-xs.col-sm-12.peter_hongisto-pic(data-name='peter_hongisto')
+            h4 !{peterHongisto.getText('firstName')} !{peterHongisto.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.peter_hongisto-xs-image(data-name='peter_hongisto-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=peterHongisto.getImage('image-l').url + ', ' + peterHongisto.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=peterHongisto.getImage('image-m').url + ', ' + peterHongisto.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=peterHongisto.getImage('image-s').url + ', ' + peterHongisto.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=peterHongisto.getImage('image-xs').url + ', ' + peterHongisto.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+          //if IE 9
+          img.img-responsive(src=peterHongisto.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+      .row.crew-detail-xs.hidden-sm.peter_hongisto-xs
+        .col-xs-10.col-xs-offset-1
+          a(href='#peter_hongisto-xs')
+          a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='peter_hongisto-xs')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          h4.name 
+            != peterHongisto.getText('firstName')
+            span.red + 
+            != peterHongisto.getText('lastName')
+          != peterHongisto.getStructuredText('profileText').asHtml(ctx.linkResolver)
+
+      .col-xs-12.col-sm-7
+        .row
+          .crew.hidden-xs.col-sm-12.kevin_o_reilly-pic(data-name='kevin_o_reilly')
+            h4 !{kevinOreilly.getText('firstName')} !{kevinOreilly.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.kevin_o_reilly-xs-image(data-name='kevin_o_reilly-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=kevinOreilly.getImage('image-l').url + ', ' + kevinOreilly.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=kevinOreilly.getImage('image-m').url + ', ' + kevinOreilly.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=kevinOreilly.getImage('image-s').url + ', ' + kevinOreilly.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=kevinOreilly.getImage('image-xs').url + ', ' + kevinOreilly.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+          //if IE 9
+          img.img-responsive(src=kevinOreilly.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+      .row.crew-detail-xs.hidden-sm.kevin_o_reilly-xs
+        .col-xs-10.col-xs-offset-1
+          a(href='#kevin_o_reilly-xs')
+          a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='kevin_o_reilly-xs')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          h4.name 
+            != kevinOreilly.getText('firstName')
+            span.red + 
+            != kevinOreilly.getText('lastName')
+          != kevinOreilly.getStructuredText('profileText').asHtml(ctx.linkResolver)
+
+      .col-xs-12.col-sm-6
+        .row
+          .crew.hidden-xs.col-sm-12.conrad_fuhrman-pic(data-name='conrad_fuhrman')
+            h4 !{conradFuhrman.getText('firstName')} !{conradFuhrman.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.conrad_fuhrman-xs-image(data-name='conrad_fuhrman-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=conradFuhrman.getImage('image-l').url + ', ' + conradFuhrman.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=conradFuhrman.getImage('image-m').url + ', ' + conradFuhrman.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=conradFuhrman.getImage('image-s').url + ', ' + conradFuhrman.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=conradFuhrman.getImage('image-xs').url + ', ' + conradFuhrman.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+          //if IE 9
+          img.img-responsive(src=conradFuhrman.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+      .row.crew-detail-xs.hidden-sm.conrad_fuhrman-xs
+        .col-xs-10.col-xs-offset-1
+          a(href='#conrad_fuhrman-xs')
+          a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='conrad_fuhrman-xs')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          h4.name 
+            != conradFuhrman.getText('firstName')
+            span.red + 
+            != conradFuhrman.getText('lastName')
+          != conradFuhrman.getStructuredText('profileText').asHtml(ctx.linkResolver)
+
+      .col-xs-12.col-sm-6
+        .row
+          .crew.hidden-xs.col-sm-12.nolan_marketti-pic(data-name='nolan_marketti')
+            h4 !{nolanMarketti.getText('firstName')} !{nolanMarketti.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.nolan_marketti-xs-image(data-name='nolan_marketti-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=nolanMarketti.getImage('image-l').url + ', ' + nolanMarketti.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=nolanMarketti.getImage('image-m').url + ', ' + nolanMarketti.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=nolanMarketti.getImage('image-s').url + ', ' + nolanMarketti.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=nolanMarketti.getImage('image-xs').url + ', ' + nolanMarketti.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+          //if IE 9
+          img.img-responsive(src=nolanMarketti.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+      .row.crew-detail-xs.hidden-sm.nolan_marketti-xs
+        .col-xs-10.col-xs-offset-1
+          a(href='#nolan_marketti-xs')
+          a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='nolan_marketti-xs')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          h4.name 
+            != nolanMarketti.getText('firstName')
+            span.red + 
+            != nolanMarketti.getText('lastName')
+          != nolanMarketti.getStructuredText('profileText').asHtml(ctx.linkResolver)
+
+      .col-xs-12.col-sm-7
+        .row
+          .crew.hidden-xs.col-sm-12.jackie_bender-pic(data-name='jackie_bender')
+            h4 !{jackieBender.getText('firstName')} !{jackieBender.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.jackie_bender-xs-image(data-name='jackie_bender-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=jackieBender.getImage('image-l').url + ', ' + jackieBender.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=jackieBender.getImage('image-m').url + ', ' + jackieBender.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=jackieBender.getImage('image-s').url + ', ' + jackieBender.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=jackieBender.getImage('image-xs').url + ', ' + jackieBender.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+          //if IE 9
+          img.img-responsive(src=jackieBender.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+      .row.crew-detail-xs.hidden-sm.jackie_bender-xs
+        .col-xs-10.col-xs-offset-1
+          a(href='#jackie_bender-xs')
+          a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='jackie_bender-xs')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          h4.name 
+            != jackieBender.getText('firstName')
+            span.red + 
+            != jackieBender.getText('lastName')
+          != jackieBender.getStructuredText('profileText').asHtml(ctx.linkResolver)
+
+      .col-xs-12.col-sm-5
+        .row
+          .crew.hidden-xs.col-sm-12.scott_porembski-pic(data-name='scott_porembski')
+            h4 !{scottPorembski.getText('firstName')} !{scottPorembski.getText('lastName')}
+            svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line(x1='2', y1='0', x2='2', y2='80')
+          .crew-xs.visible-xs-block.col-xs-12.scott_porembski-xs-image(data-name='scott_porembski-xs')
+        picture
+          //if IE 9
+            video(style='display: none;')
+          source(srcset=scottPorembski.getImage('image-l').url + ', ' + scottPorembski.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+          source(srcset=scottPorembski.getImage('image-m').url + ', ' + scottPorembski.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+          source(srcset=scottPorembski.getImage('image-s').url + ', ' + scottPorembski.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+          source(srcset=scottPorembski.getImage('image-xs').url + ', ' + scottPorembski.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+          //if IE 9
+          img.img-responsive(src=scottPorembski.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+      .row.crew-detail-xs.hidden-sm.scott_porembski-xs
+        .col-xs-10.col-xs-offset-1
+          a(href='#scott_porembski-xs')
+          a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='scott_porembski-xs')
+            | CLOSE
+            svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              line.left(x1='10', y1='25', x2='40', y2='25')
+              line.right(x1='10', y1='25', x2='40', y2='25')
+          h4.name 
+            != scottPorembski.getText('firstName')
+            span.red + 
+            != scottPorembski.getText('lastName')
+          != scottPorembski.getStructuredText('profileText').asHtml(ctx.linkResolver)

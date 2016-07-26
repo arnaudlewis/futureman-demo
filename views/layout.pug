@@ -1,4 +1,6 @@
 doctype html
+html
+block vars
 head
   meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
   meta(name='apple-mobile-web-app-capable', content='yes')
@@ -17,7 +19,9 @@ head
   script(src="//static.cdn.prismic.io/prismic.min.js")
   script.
     window.Router = !{JSON.stringify(Router)}
-body
+
+- var wioID = prismicDoc ? prismicDoc.id : ''
+body.landing(data-wio-id=wioID)
   block body
 
 script(src="/js/frontend.js")
