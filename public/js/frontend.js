@@ -507,6 +507,9 @@ $(document).ready(function() {
 
     //Adjust the elevator height for a resize (also in the resize function)
     $('.elevator').css('height', win_height);
+  
+    //Add bullets for crew detail profiles
+    $('.crew-detail ul li, .crew-detail-xs ul li').prepend( "<span class='red'>+ </span>" );
 
 
 
@@ -710,8 +713,6 @@ $(document).ready(function() {
     $('.right-hero-control').on('click', function() {
         current_index = $('div.active').index() + 1; //Current
         future_index = $('div.active').index() + 2;
-
-        console.log('total items: ' + total_items);
 
         if (future_index > total_items) {
             future_index = 1;

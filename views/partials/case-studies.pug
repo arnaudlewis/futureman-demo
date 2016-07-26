@@ -1,0 +1,41 @@
+section.project-1.case-studies
+  .container-fluid
+    .items.hidden-xs
+
+      //- Loop through the case studies for the normal view
+      each caseStudy in slice.value.toArray()
+
+        - var linkURL = "#"
+        if caseStudy.getLink('link') != null
+          - linkURL = caseStudy.getLink('link').url(ctx.linkResolver)
+
+        a(href=linkURL)
+          .item(style='background: url(' + caseStudy.getImage('backgroundImage').url + '); background-size: 500px 250px; background-position: center center;')
+            .item-cover.hidden-xs
+              -var title = caseStudy.getStructuredText('title')
+              != title? caseStudy.getStructuredText('title').asHtml(ctx.linkResolver) : ""
+              -var subTitle = caseStudy.getStructuredText('title')
+              != subTitle? caseStudy.getStructuredText('subTitle').asHtml(ctx.linkResolver) : ""
+
+
+    .row.visible-xs
+      .col-xs-12
+        #case-studies-carousel.carousel.slide(data-ride='carousel')
+          .carousel-inner
+            .item.active
+
+            //- Loop through the case studies for the mobile view
+            each caseStudy in slice.value.toArray()
+
+              - var linkURL = "#"
+              if caseStudy.getLink('link') != null
+                - linkURL = caseStudy.getLink('link').url(ctx.linkResolver)
+
+              a(href=linkURL)
+                .cs-item
+                  .img
+                    img.img-responsive(width='1536', src=caseStudy.getImage('backgroundImageMobile').url)
+                  .item-cover-xs
+                    h4
+                      | !{caseStudy.getText('title')}
+                      small !{caseStudy.getText('subTitle')}
