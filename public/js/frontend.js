@@ -507,6 +507,9 @@ $(document).ready(function() {
 
     //Adjust the elevator height for a resize (also in the resize function)
     $('.elevator').css('height', win_height);
+  
+    //Add bullets for crew detail profiles
+    $('.crew-detail ul li, .crew-detail-xs ul li').prepend( "<span class='red'>+ </span>" );
 
 
 

@@ -468,94 +468,85 @@ block body
         //- What We Do
         when 'people'
           
+          - var jameyBerry = slice.value.toArray()[0]
+          - var peterBecker = slice.value.toArray()[1]
+          - var justinEdwards = slice.value.toArray()[2]
+          - var dillonBarenbrugge = slice.value.toArray()[3]
+          - var peterHongisto = slice.value.toArray()[4]
+          - var kevinOreilly = slice.value.toArray()[5]
+          - var conradFuhrman = slice.value.toArray()[6]
+          - var nolanMarketti = slice.value.toArray()[7]
+          - var jackieBender = slice.value.toArray()[8]
+          - var scottPorembski = slice.value.toArray()[9]
           
           section.people-1
             .container-fluid.hidden-xs
-            - var people = slice.value.toArray()[0]
               .row
                 .col-xs-12.col-sm-8
                   .row
                     .crew.hidden-xs.col-sm-12.jamey_berry-pic(data-name='jamey_berry')
-                      h4 Jamey Berry
+                      h4 !{jameyBerry.getText('firstName')} !{jameyBerry.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.jamey_berry-xs-image(data-name='jamey_berry-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/jamey-hd.jpg, /img/people/l/jamey-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/jamey-hd.jpg, /img/people/m/jamey-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/jamey-hd.jpg, /img/people/s/jamey-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/jamey-hd.jpg, /img/people/xs/jamey-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=jameyBerry.getImage('image-l').url + ', ' + jameyBerry.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=jameyBerry.getImage('image-m').url + ', ' + jameyBerry.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=jameyBerry.getImage('image-s').url + ', ' + jameyBerry.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=jameyBerry.getImage('image-xs').url + ', ' + jameyBerry.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
                     //if IE 9
-                    img.img-responsive(src='/img/jamey-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=jameyBerry.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                 .col-xs-12.col-sm-4
                   .row
                     .crew.hidden-xs.col-sm-12.peter_becker-pic(data-name='peter_becker')
-                      h4 Peter Becker
+                      h4 !{jameyBerry.getText('firstName')} !{jameyBerry.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.peter_becker-xs-image(data-name='peter_becker-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/peterb-hd.jpg, /img/people/l/peterb-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/peterb-hd.jpg, /img/people/m/peterb-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/peterb-hd.jpg, /img/people/s/peterb-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/peterb-hd.jpg, /img/people/xs/peterb-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=peterBecker.getImage('image-l').url + ', ' + peterBecker.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=peterBecker.getImage('image-m').url + ', ' + peterBecker.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=peterBecker.getImage('image-s').url + ', ' + peterBecker.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=peterBecker.getImage('image-xs').url + ', ' + peterBecker.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
                     //if IE 9
-                    img.img-responsive(src='/img/peterb-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=peterBecker.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
               .row
                 .row.crew-detail.jamey_berry
                   .col-sm-5.col-md-4.col-lg-3
                     picture
                       //if IE 9
                         video(style='display: none;')
-                      source(srcset='/img/people/jamey-profile.jpg, /img/people/jamey-profile-hd.jpg 2x')
+                      source(srcset=jameyBerry.getImage('profileImage').url + ', ' + jameyBerry.getImage('profileImage').url + ' 2x')
                       //if IE 9
                       img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                   .col-sm-7.col-md-8.col-lg-9
-                    a(href='http://futuremandigital.com/#jamey_berry')
+                    a(href='#jamey_berry')
                     a.crew-close(href='http://futuremandigital.com/#', data-name='jamey_berry')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line.left(x1='10', y1='25', x2='40', y2='25')
                         line.right(x1='10', y1='25', x2='40', y2='25')
                     .crew-content
-                      h4.name
-                        | Jamey
-                        span.red +
-                        |  Berry
-                      p.item.title
-                        span.red +
-                        |  President
-                      p.item
-                        span.red +
-                        |  Family Man
-                      p.item
-                        span.red +
-                        |  Happy Hour Enthusiast
-                      p.item
-                        span.red +
-                        |  Growing Older, but Not Up
-                      p.item
-                        span.red +
-                        |   Drives a Pick-up Truck
-                      .content
-                        p
-                          | A pioneer in digital and new media, Jamey serves as Futureman’s founder and chief creative director. His vision was to make Futureman a single entity where digital, film, and interactive were housed under one roof. Jamey leads the company under the guise that quiet confidence and positive attitudes are the secret sauce to Futureman’s success.
-                        p
-                          | “Stunning creative and flawless execution is a no-brainer. What clients don’t expect is how much fun they have working with us...that’s what it's all about. Our clients learn about us by referrals and word of mouth. We don’t need a megaphone, our client roster speaks for itself.”
+                      h4.name 
+                        != jameyBerry.getText('firstName')
+                        span.red + 
+                        != jameyBerry.getText('lastName')
+                      != jameyBerry.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                      
                 .row.crew-detail.peter_becker
                   .col-sm-5.col-md-4.col-lg-3
                     picture
                       //if IE 9
                         video(style='display: none;')
-                      source(srcset='/img/people/peterb-profile.jpg, /img/people/peterb-profile-hd.jpg 2x')
+                      source(srcset=peterBecker.getImage('profileImage').url + ', ' + peterBecker.getImage('profileImage').url + ' 2x')
                       //if IE 9
                       img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                   .col-sm-7.col-md-8.col-lg-9
-                    a(href='http://futuremandigital.com/#peter_becker')
+                    a(href='#peter_becker')
                     a.crew-close(href='http://futuremandigital.com/#', data-name='peter_becker')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
@@ -563,457 +554,323 @@ block body
                         line.right(x1='10', y1='25', x2='40', y2='25')
                     .crew-content
                       h4.name
-                        | Peter
-                        span.red +
-                        |  Becker
-                      p.item.title
-                        span.red +
-                        |  Vice President
-                      p.item
-                        span.red +
-                        |  Family First
-                      p.item
-                        span.red +
-                        |  "Crab Cakes and Football"
-                      p.item
-                        span.red +
-                        |  OBX
-                      p.item
-                        span.red +
-                        |  Project Management and Delivery
-                      .content
-                        p
-                          | A veteran of digital, Peter is the resident account and project management director at Futureman. He spearheads the agency's client services and operations. His experience in agency-side solutions delivery, client-side marketing, production, graphic design, media, manufacturing, and team leadership allow him to precisely service Futureman's diverse client roster, and his attention to detail ensures agency projects are delivered flawlessly, on time and on budget.
-                        p
-                          | A glutton for challenges, Mid-Atlantic seafood, horror films, the Rolling Stones, and Baltimore sports, Peter has spent the past 4+ years refining the business' operations model to employ best practices across every agency discipline and in doing so, has helped catapult the business forward. Each and every day he works hand in hand with clients to deliver high-caliber projects and keep the company's moniker of the preferred or "go to" agency for countless clients and agency partners, in tact.
+                        != peterBecker.getText('firstName')
+                        span.red + 
+                        != peterBecker.getText('lastName')
+                      != peterBecker.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                      
               .row
                 .col-xs-12.col-sm-6
                   .row
                     .crew.hidden-xs.col-sm-12.justin_edwards-pic(data-name='justin_edwards')
-                      h4 Justin Edwards
+                      h4 !{justinEdwards.getText('firstName')} !{justinEdwards.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.justin_edwards-xs-image(data-name='justin_edwards-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/justin-hd.jpg, /img/people/l/justin-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/justin-hd.jpg, /img/people/m/justin-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/justin-hd.jpg, /img/people/s/justin-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/justin-hd.jpg, /img/people/xs/justin-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=justinEdwards.getImage('image-l').url + ', ' + justinEdwards.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=justinEdwards.getImage('image-m').url + ', ' + justinEdwards.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=justinEdwards.getImage('image-s').url + ', ' + justinEdwards.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=justinEdwards.getImage('image-xs').url + ', ' + justinEdwards.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
                     //if IE 9
-                    img.img-responsive(src='/img/justin-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=justinEdwards.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                 .col-xs-12.col-sm-6
                   .row
                     .crew.hidden-xs.col-sm-12.dillon_barenbrugge-pic(data-name='dillon_barenbrugge')
-                      h4 Dillon Barenbrugge
+                      h4 !{dillonBarenbrugge.getText('firstName')} !{dillonBarenbrugge.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.dillon_barenbrugge-xs-image(data-name='dillon_barenbrugge-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/dillon-hd.jpg, /img/people/l/dillon-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/dillon-hd.jpg, /img/people/m/dillon-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/dillon-hd.jpg, /img/people/s/dillon-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/dillon-hd.jpg, /img/people/xs/dillon-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=dillonBarenbrugge.getImage('image-l').url + ', ' + dillonBarenbrugge.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=dillonBarenbrugge.getImage('image-m').url + ', ' + dillonBarenbrugge.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=dillonBarenbrugge.getImage('image-s').url + ', ' + dillonBarenbrugge.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=dillonBarenbrugge.getImage('image-xs').url + ', ' + dillonBarenbrugge.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
                     //if IE 9
-                    img.img-responsive(src='/img/dillon-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=dillonBarenbrugge.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
               .row
                 .row.crew-detail.justin_edwards
                   .col-sm-5.col-md-4.col-lg-3
                     picture
                       //if IE 9
                         video(style='display: none;')
-                      source(srcset='/img/people/justin-profile.jpg, /img/people/justin-profile-hd.jpg 2x')
+                      source(srcset=justinEdwards.getImage('profileImage').url + ', ' + justinEdwards.getImage('profileImage').url + ' 2x')
                       //if IE 9
                       img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                   .col-sm-7.col-md-8.col-lg-9
-                    a(href='http://futuremandigital.com/#justin_edwards')
+                    a(href='#justin_edwards')
                     a.crew-close(href='http://futuremandigital.com/#', data-name='justin_edwards')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line.left(x1='10', y1='25', x2='40', y2='25')
                         line.right(x1='10', y1='25', x2='40', y2='25')
                     .crew-content
-                      h4.name
-                        | Justin
-                        span.red +
-                        |  Edwards
-                      p.item.title
-                        span.red +
-                        |  Creative Astronaut
-                      p.item
-                        span.red +
-                        |  Skateboarder
-                      p.item
-                        span.red +
-                        |  Picture-taker
-                      p.item
-                        span.red +
-                        |  “Downtown Wigwam”
-                      .content
-                        p
-                          | Justin is a lifelong film maker and award-winning editor. There is not much you can say about Justin other than that he has a gift for storytelling. He has shot and edited films and videos for FOX Twentieth Television, Red Bull, Gatorade, NFL, Special K, Coors Light, Nike, and countless others. He also likes to take pictures and skateboard.
+                      h4.name 
+                        != justinEdwards.getText('firstName')
+                        span.red + 
+                        != justinEdwards.getText('lastName')
+                      != justinEdwards.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                      
                 .row.crew-detail.dillon_barenbrugge
                   .col-sm-5.col-md-4.col-lg-3
                     picture
                       //if IE 9
                         video(style='display: none;')
-                      source(srcset='/img/people/dillon-profile.jpg, /img/people/dillon-profile-hd.jpg 2x')
+                      source(srcset=dillonBarenbrugge.getImage('profileImage').url + ', ' + dillonBarenbrugge.getImage('profileImage').url + ' 2x')
                       //if IE 9
                       img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                   .col-sm-7.col-md-8.col-lg-9
-                    a(href='http://futuremandigital.com/#dillon_barenbrugge')
+                    a(href='#dillon_barenbrugge')
                     a.crew-close(href='http://futuremandigital.com/#', data-name='dillon_barenbrugge')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line.left(x1='10', y1='25', x2='40', y2='25')
                         line.right(x1='10', y1='25', x2='40', y2='25')
                     .crew-content
-                      h4.name
-                        | Dillon
-                        span.red +
-                        |  Barenbrugge
-                      p.item.title
-                        span.red +
-                        |  Designer + Developer
-                      p.item
-                        span.red +
-                        |  Photography
-                      p.item
-                        span.red +
-                        |  Whiskey Aficionado
-                      p.item
-                        span.red +
-                        |  Hip-Hop Enthusiast
-                      .content
-                        p
-                          | Dillon is the latest addition to the Futureman team. Growing up, Dillon always had an interest in drawing, and in high school he was introduced to the digital arts. He went on to double major in Arts Technology and Graphic Design at Illinois State University. With design as his primary focus, he was then introduced to web development during an internship at ISU. With a combined 8 years experience in design and front end development, he now pushes himself to enhance the creative experience online through the use of good design.
+                      h4.name 
+                        != dillonBarenbrugge.getText('firstName')
+                        span.red + 
+                        != dillonBarenbrugge.getText('lastName')
+                      != dillonBarenbrugge.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                      
               .row
                 .col-xs-12.col-sm-5
                   .row
                     .crew.hidden-xs.col-sm-12.peter_hongisto-pic(data-name='peter_hongisto')
-                      h4 Peter Hongisto
+                      h4 !{peterHongisto.getText('firstName')} !{peterHongisto.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.peter_hongisto-xs-image(data-name='peter_hongisto-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/peterh-hd.jpg, /img/people/l/peterh-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/peterh-hd.jpg, /img/people/m/peterh-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/peterh-hd.jpg, /img/people/s/peterh-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/peterh-hd.jpg, /img/people/xs/peterh-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=peterHongisto.getImage('image-l').url + ', ' + peterHongisto.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=peterHongisto.getImage('image-m').url + ', ' + peterHongisto.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=peterHongisto.getImage('image-s').url + ', ' + peterHongisto.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=peterHongisto.getImage('image-xs').url + ', ' + peterHongisto.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
                     //if IE 9
-                    img.img-responsive(src='/img/peterh-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=peterHongisto.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                 .col-xs-12.col-sm-7
                   .row
                     .crew.hidden-xs.col-sm-12.kevin_o_reilly-pic(data-name='kevin_o_reilly')
-                      h4 Kevin O'Reilly
+                      h4 !{kevinOreilly.getText('firstName')} !{kevinOreilly.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.kevin_o_reilly-xs-image(data-name='kevin_o_reilly-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/kevin-hd.jpg, /img/people/l/kevin-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/kevin-hd.jpg, /img/people/m/kevin-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/kevin-hd.jpg, /img/people/s/kevin-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/kevin-hd.jpg, /img/people/xs/kevin-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=kevinOreilly.getImage('image-l').url + ', ' + kevinOreilly.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=kevinOreilly.getImage('image-m').url + ', ' + kevinOreilly.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=kevinOreilly.getImage('image-s').url + ', ' + kevinOreilly.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=kevinOreilly.getImage('image-xs').url + ', ' + kevinOreilly.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
                     //if IE 9
-                    img.img-responsive(src='/img/kevin-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=kevinOreilly.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
               .row
                 .row.crew-detail.peter_hongisto
                   .col-sm-5.col-md-4.col-lg-3
                     picture
                       //if IE 9
                         video(style='display: none;')
-                      source(srcset='/img/people/peterh-profile.jpg, /img/people/peterh-profile-hd.jpg 2x')
+                      source(srcset=peterHongisto.getImage('profileImage').url + ', ' + peterHongisto.getImage('profileImage').url + ' 2x')
                       //if IE 9
                       img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                   .col-sm-7.col-md-8.col-lg-9
-                    a(href='http://futuremandigital.com/#peter_hongisto')
+                    a(href='#peter_hongisto')
                     a.crew-close(href='http://futuremandigital.com/#', data-name='peter_hongisto')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line.left(x1='10', y1='25', x2='40', y2='25')
                         line.right(x1='10', y1='25', x2='40', y2='25')
                     .crew-content
-                      h4.name
-                        | Peter
-                        span.red +
-                        |  Hongisto
-                      p.item.title
-                        span.red +
-                        |  Editor
-                      p.item
-                        span.red +
-                        |  Digital Film Maker
-                      p.item
-                        span.red +
-                        |  Remarkably Quiet
-                      p.item
-                        span.red +
-                        |  Cookie Lover
-                      .content
-                        p
-                          | Hailing from the corn fields of western Illinois, Peter is a video editor and independent filmmaker. He has been crafting videos since he could hold a camera. He is an alum of DePaul University’s Digital Cinema program and a veteran of both production and post-production.
-                        p
-                          | Peter is a member of the Futureman Video Team, creating informative and entertaining videos for a wide breadth of clientele. He is eager and tireless, always striving to get “the shot.” He also really does like cookies as much as his profile suggests.
+                      h4.name 
+                        != peterHongisto.getText('firstName')
+                        span.red + 
+                        != peterHongisto.getText('lastName')
+                      != peterHongisto.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                      
                 .row.crew-detail.kevin_o_reilly
                   .col-sm-5.col-md-4.col-lg-3
                     picture
                       //if IE 9
                         video(style='display: none;')
-                      source(srcset='/img/people/kevin-profile.jpg, /img/people/kevin-profile-hd.jpg 2x')
+                      source(srcset=kevinOreilly.getImage('profileImage').url + ', ' + kevinOreilly.getImage('profileImage').url + ' 2x')
                       //if IE 9
                       img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                   .col-sm-7.col-md-8.col-lg-9
-                    a(href='http://futuremandigital.com/#kevin_o_reilly')
+                    a(href='#kevin_o_reilly')
                     a.crew-close(href='http://futuremandigital.com/#', data-name='kevin_o_reilly')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line.left(x1='10', y1='25', x2='40', y2='25')
                         line.right(x1='10', y1='25', x2='40', y2='25')
                     .crew-content
-                      h4.name
-                        | Kevin
-                        span.red +
-                        |  O'Reilly
-                      p.item.title
-                        span.red +
-                        |  Producer
-                      p.item
-                        span.red +
-                        |  Office Role: Older looking happy guy
-                      p.item
-                        span.red +
-                        |  First job: Caddy from age 9 until 22
-                      p.item
-                        span.red +
-                        |  Favorite hobby: Woodworking
-                      .content
-                        p
-                          | Kevin O’Reilly joined the Futureman team in early 2014. O’Reilly was the president and founder of Buildings On Demand. Spending over a decade in the commercial real estate industry, O’Reilly saw an opportunity to change the way office buildings were being marketed. He began by creating story telling video productions for the purposes of marketing commercial office buildings and their spaces. Working with the Futureman team from the beginning, the two businesses eventually formed the joint venture agency, BOD Creative. BOD Creative offers Futureman’s full range of creative services with a primary focus of providing web design/development and video production to the commercial real estate industry. Throughout his commercial real estate career, O’Reilly worked as a trusted advisor to the senior management of many different business types, consulting on both the financial and cultural aspects of their operations. His past experiences translate well into serving the various needs of Futureman’s clients.
-                        p
-                          | For over eight years O’Reilly was a volunteer and Associate Board Member with Jobs for Youth Chicago. In 2009, O’Reilly raised significant funds for the Leukemia and Lymphoma Society as a candidate in their annual competition, Man of the Year. In 2013, O’Reilly was a student at The Starter League focusing on web development. O’Reilly is a graduate of Ohio University.
+                      h4.name 
+                        != kevinOreilly.getText('firstName')
+                        span.red + 
+                        != kevinOreilly.getText('lastName')
+                      != kevinOreilly.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                      
               .row
                 .col-xs-12.col-sm-6
                   .row
                     .crew.hidden-xs.col-sm-12.conrad_fuhrman-pic(data-name='conrad_fuhrman')
-                      h4 Conrad Fuhrman
+                      h4 !{conradFuhrman.getText('firstName')} !{conradFuhrman.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.conrad_fuhrman-xs-image(data-name='conrad_fuhrman-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/conrad-hd.jpg, /img/people/l/conrad-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/conrad-hd.jpg, /img/people/m/conrad-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/conrad-hd.jpg, /img/people/s/conrad-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/conrad-hd.jpg, /img/people/xs/conrad-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=conradFuhrman.getImage('image-l').url + ', ' + conradFuhrman.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=conradFuhrman.getImage('image-m').url + ', ' + conradFuhrman.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=conradFuhrman.getImage('image-s').url + ', ' + conradFuhrman.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=conradFuhrman.getImage('image-xs').url + ', ' + conradFuhrman.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
                     //if IE 9
-                    img.img-responsive(src='/img/conrad-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=conradFuhrman.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                 .col-xs-12.col-sm-6
                   .row
                     .crew.hidden-xs.col-sm-12.nolan_marketti-pic(data-name='nolan_marketti')
-                      h4 Nolan Marketti
+                      h4 !{nolanMarketti.getText('firstName')} !{nolanMarketti.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.nolan_marketti-xs-image(data-name='nolan_marketti-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/nolan-hd.jpg, /img/people/l/nolan-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/nolan-hd.jpg, /img/people/m/nolan-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/nolan-hd.jpg, /img/people/s/nolan-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/nolan-hd.jpg, /img/people/xs/nolan-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=nolanMarketti.getImage('image-l').url + ', ' + nolanMarketti.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=nolanMarketti.getImage('image-m').url + ', ' + nolanMarketti.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=nolanMarketti.getImage('image-s').url + ', ' + nolanMarketti.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=nolanMarketti.getImage('image-xs').url + ', ' + nolanMarketti.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
                     //if IE 9
-                    img.img-responsive(src='/img/nolan-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=nolanMarketti.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
               .row
                 .row.crew-detail.conrad_fuhrman
                   .col-sm-5.col-md-4.col-lg-3
                     picture
                       //if IE 9
                         video(style='display: none;')
-                      source(srcset='/img/people/conrad-profile.jpg, /img/people/conrad-profile-hd.jpg 2x')
+                      source(srcset=conradFuhrman.getImage('profileImage').url + ', ' + conradFuhrman.getImage('profileImage').url + ' 2x')
                       //if IE 9
                       img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                   .col-sm-7.col-md-8.col-lg-9
-                    a(href='http://futuremandigital.com/#conrad_fuhrman')
+                    a(href='#conrad_fuhrman')
                     a.crew-close(href='http://futuremandigital.com/#', data-name='conrad_fuhrman')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line.left(x1='10', y1='25', x2='40', y2='25')
                         line.right(x1='10', y1='25', x2='40', y2='25')
                     .crew-content
-                      h4.name
-                        | Conrad
-                        span.red +
-                        |  Fuhrman
-                      p.item.title
-                        span.red +
-                        |  Chief Technology Officer
-                      p.item
-                        span.red +
-                        |  Brewing
-                      p.item
-                        span.red +
-                        |  Audiophile
-                      p.item
-                        span.red +
-                        |  Laravel
-                      .content
-                        p
-                          | With over 15 years in digital and design, Conrad has worked with brands such as Ernst & Young, McDonald's, Nike, P&G, CIBA Vision, James Hardie and more. He studied design and animation at the Illinois Institute of Art, harnessing his passion for creative and translating it to UI, UX, and development. Conrad also was part of Excelerate Labs, a Chicago incubator now part of TechStars, and co-founded MakeItFor.Us, a marketplace where anything can be made.
-                        p
-                          | Conrad brings to Futureman a critical skill set and expertise that encapsulates design, UX, and development. This hybrid offering enables him to scope, design, and deliver projects with a powerful and unmatched POV.
-                        p
-                          | When he's not at Futureman, Conrad loves listening to vinyl and is currently building a custom 6v6 tube preamp. He also serves on the board of CHAOS Brew Club where he brews beer. Drinking the beer he makes is also an enjoyment of his. If you're fortunate enough to stop by the office, you might get a chance to have some of the beer he brews on tap.
+                      h4.name 
+                        != conradFuhrman.getText('firstName')
+                        span.red + 
+                        != conradFuhrman.getText('lastName')
+                      != conradFuhrman.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                      
                 .row.crew-detail.nolan_marketti
                   .col-sm-5.col-md-4.col-lg-3
                     picture
                       //if IE 9
                         video(style='display: none;')
-                      source(srcset='/img/people/nolan-profile.jpg, /img/people/nolan-profile-hd.jpg 2x')
+                      source(srcset=nolanMarketti.getImage('profileImage').url + ', ' + nolanMarketti.getImage('profileImage').url + ' 2x')
                       //if IE 9
                       img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                   .col-sm-7.col-md-8.col-lg-9
-                    a(href='http://futuremandigital.com/#nolan_marketti')
+                    a(href='#nolan_marketti')
                     a.crew-close(href='http://futuremandigital.com/#', data-name='nolan_marketti')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line.left(x1='10', y1='25', x2='40', y2='25')
                         line.right(x1='10', y1='25', x2='40', y2='25')
                     .crew-content
-                      h4.name
-                        | Nolan
-                        span.red +
-                        |  Marketti
-                      p.item.title
-                        span.red +
-                        |  Senior Designer
-                      p.item
-                        span.red +
-                        |  Master Chef
-                      p.item
-                        span.red +
-                        |  Outdoor Enthusiast
-                      p.item
-                        span.red +
-                        |  NHL
-                      .content
-                        p
-                          | Nolan crafts visual stories through design. From the “glove state”, he  set his roots here in Chicago and received his Bachelor of Fine Arts at The Illinois Institute of Art - Chicago.
-                        p
-                          | With experience in print, packaging and web, his versatile skill set translates into all aspects of design. He is diligent, thought-provoking and always brings a unique, different perspective to the table. He’s a lover of type, the grid and Helvetica. He can also defend the most widely hated typeface Comic Sans.
+                      h4.name 
+                        != nolanMarketti.getText('firstName')
+                        span.red + 
+                        != nolanMarketti.getText('lastName')
+                      != nolanMarketti.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                      
               .row
                 .col-xs-12.col-sm-7
                   .row
                     .crew.hidden-xs.col-sm-12.jackie_bender-pic(data-name='jackie_bender')
-                      h4 Jackie Bender
+                      h4 !{jackieBender.getText('firstName')} !{jackieBender.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.jackie_bender-xs-image(data-name='jackie_bender-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/jackie-hd.jpg, /img/people/l/jackie-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/jackie-hd.jpg, /img/people/m/jackie-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/jackie-hd.jpg, /img/people/s/jackie-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/jackie-hd.jpg, /img/people/xs/jackie-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=jackieBender.getImage('image-l').url + ', ' + jackieBender.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=jackieBender.getImage('image-m').url + ', ' + jackieBender.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=jackieBender.getImage('image-s').url + ', ' + jackieBender.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=jackieBender.getImage('image-xs').url + ', ' + jackieBender.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
                     //if IE 9
-                    img.img-responsive(src='/img/jackie-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=jackieBender.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                 .col-xs-12.col-sm-5
                   .row
                     .crew.hidden-xs.col-sm-12.scott_porembski-pic(data-name='scott_porembski')
-                      h4 Scott Porembski
+                      h4 !{scottPorembski.getText('firstName')} !{scottPorembski.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.scott_porembski-xs-image(data-name='scott_porembski-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/scott-hd.jpg, /img/people/l/scott-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/scott-hd.jpg, /img/people/m/scott-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/scott-hd.jpg, /img/people/s/scott-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/scott-hd.jpg, /img/people/xs/scott-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=scottPorembski.getImage('image-l').url + ', ' + scottPorembski.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=scottPorembski.getImage('image-m').url + ', ' + scottPorembski.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=scottPorembski.getImage('image-s').url + ', ' + scottPorembski.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=scottPorembski.getImage('image-xs').url + ', ' + scottPorembski.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
                     //if IE 9
-                    img.img-responsive(src='/img/scott-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=scottPorembski.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
               .row
                 .row.crew-detail.jackie_bender
                   .col-sm-5.col-md-4.col-lg-3
                     picture
                       //if IE 9
                         video(style='display: none;')
-                      source(srcset='/img/people/jackie-profile.jpg, /img/people/jackie-profile-hd.jpg 2x')
+                      source(srcset=jackieBender.getImage('profileImage').url + ', ' + jackieBender.getImage('profileImage').url + ' 2x')
                       //if IE 9
                       img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                   .col-sm-7.col-md-8.col-lg-9
-                    a(href='http://futuremandigital.com/#jackie_bender')
+                    a(href='#jackie_bender')
                     a.crew-close(href='http://futuremandigital.com/#', data-name='jackie_bender')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line.left(x1='10', y1='25', x2='40', y2='25')
                         line.right(x1='10', y1='25', x2='40', y2='25')
                     .crew-content
-                      h4.name
-                        | Jackie
-                        span.red +
-                        |  Bender
-                      p.item.title
-                        span.red +
-                        |  Producer & Copy Writer
-                      p.item
-                        span.red +
-                        |  Champagne enthusiast
-                      p.item
-                        span.red +
-                        |  Second coming of Mozart on piano
-                      p.item
-                        span.red +
-                        |  Spirit shape: squiggle
-                      .content
-                        p
-                          | Jackie is an on-camera host & producer who specializes in news, entertainment and fashion for TV, web, and print. She hosts and writes FOX’s “Celebrity Relationship Index” for Futureman, and has produced for ABC Network News, Good Morning America, World News Tonight and Nightline. She’s hosted segments for TODAY.com, ABC Eyewitness News, Fox’s Good Day Chicago, ABC’s Windy City LIVE, Chicago's WGN-TV, and the NESN. As an entertainment host and producer for Tribune Broadcasting, her work syndicated across Tribune's 43 stations nationwide, AOL, and Huffington Post, generating over 25 million views. She also hosts and produces a health series called “Fit & Well” for the ContextMedia Health Network which syndicates in medical practices across all 50 states with a reach of 121M.
-                        p
-                          | She loves international travel, yoga, fashion, family, being a newlywed, cooking, and her job. She counts Sarah Jessica Parker, Sheryl Crow, and Gwyneth Paltrow among her favorite interview subjects so far.
+                      h4.name 
+                        != jackieBender.getText('firstName')
+                        span.red + 
+                        != jackieBender.getText('lastName')
+                      != jackieBender.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                      
                 .row.crew-detail.scott_porembski
                   .col-sm-5.col-md-4.col-lg-3
                     picture
                       //if IE 9
                         video(style='display: none;')
-                      source(srcset='/img/people/scott-profile.jpg, /img/people/scott-profile-hd.jpg 2x')
+                      source(srcset=scottPorembski.getImage('profileImage').url + ', ' + scottPorembski.getImage('profileImage').url + ' 2x')
                       //if IE 9
                       img(height='799', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                   .col-sm-7.col-md-8.col-lg-9
-                    a(href='http://futuremandigital.com/#scott_porembski')
+                    a(href='#scott_porembski')
                     a.crew-close(href='http://futuremandigital.com/#', data-name='scott_porembski')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line.left(x1='10', y1='25', x2='40', y2='25')
                         line.right(x1='10', y1='25', x2='40', y2='25')
                     .crew-content
-                      h4.name
-                        | Scott
-                        span.red +
-                        |  Porembski
-                      p.item.title
-                        span.red +
-                        |  Illustrator
-                      p.item
-                        span.red +
-                        |  Illustrator
-                      p.item
-                        span.red +
-                        |  Coffee addict
-                      p.item
-                        span.red +
-                        |  Keyboard player
-                      .content
-                        p
-                          | Forged in the fires of higher learning at the Illinois Institute of Art. A native of Chicagoland himself, Scott Porembski ruthlessly pursues his passion for the visual arts and storytelling. From his long background as a freelancer, Scott relishes creating in diverse digital mediums ranging from illustration, animation and film, concept art, and design to best suit each and every individual client's needs. Currently living internationally with his wife and two children in Japan, he spends his downtime composing music on the piano or doing his best not to make people feel uncomfortable while he sketches and paints in public spaces. His greatest pain and sorrow can be traced to the entire lack of Chicago style food where he resides. Seriously, no one even knows what a pizza puff is.
+                      h4.name 
+                        != scottPorembski.getText('firstName')
+                        span.red + 
+                        != scottPorembski.getText('lastName')
+                      != scottPorembski.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                      
               .row
               .row
                 .col-sm-12
@@ -1023,455 +880,304 @@ block body
                 .col-xs-12.col-sm-8
                   .row
                     .crew.hidden-xs.col-sm-12.jamey_berry-pic(data-name='jamey_berry')
-                      h4 Jamey Berry
+                      h4 !{jameyBerry.getText('firstName')} !{jameyBerry.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.jamey_berry-xs-image(data-name='jamey_berry-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/jamey-hd.jpg, /img/people/l/jamey-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/jamey-hd.jpg, /img/people/m/jamey-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/jamey-hd.jpg, /img/people/s/jamey-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/jamey-hd.jpg, /img/people/xs/jamey-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=jameyBerry.getImage('image-l').url + ', ' + jameyBerry.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=jameyBerry.getImage('image-m').url + ', ' + jameyBerry.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=jameyBerry.getImage('image-s').url + ', ' + jameyBerry.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=jameyBerry.getImage('image-xs').url + ', ' + jameyBerry.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
+                    
                     //if IE 9
-                    img.img-responsive(src='/img/jamey-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=jameyBerry.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                 .row.crew-detail-xs.hidden-sm.jamey_berry-xs
                   .col-xs-10.col-xs-offset-1
-                    a(href='http://futuremandigital.com/#jamey_berry-xs')
+                    a(href='#jamey_berry-xs')
                     a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='jamey_berry-xs')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line.left(x1='10', y1='25', x2='40', y2='25')
                         line.right(x1='10', y1='25', x2='40', y2='25')
-                    h4.name
-                      | Jamey
-                      span.red +
-                      |  Berry
-                    p.item.title
-                      span.red +
-                      |  President
-                    p.item
-                      span.red +
-                      |  Family Man
-                    p.item
-                      span.red +
-                      |  Happy Hour Enthusiast
-                    p.item
-                      span.red +
-                      |  Growing Older, but Not Up
-                    p.item
-                      span.red +
-                      |   Drives a Pick-up Truck
-                    .content
-                      p
-                        | A pioneer in digital and new media, Jamey serves as Futureman’s founder and chief creative director. His vision was to make Futureman a single entity where digital, film, and interactive were housed under one roof. Jamey leads the company under the guise that quiet confidence and positive attitudes are the secret sauce to Futureman’s success.
-                      p
-                        | “Stunning creative and flawless execution is a no-brainer. What clients don’t expect is how much fun they have working with us...that’s what it's all about. Our clients learn about us by referrals and word of mouth. We don’t need a megaphone, our client roster speaks for itself.”
+                    h4.name 
+                      != jameyBerry.getText('firstName')
+                      span.red + 
+                      != jameyBerry.getText('lastName')
+                    != jameyBerry.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                    
                 .col-xs-12.col-sm-4
                   .row
                     .crew.hidden-xs.col-sm-12.peter_becker-pic(data-name='peter_becker')
-                      h4 Peter Becker
+                      h4 !{peterBecker.getText('firstName')} !{peterBecker.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.peter_becker-xs-image(data-name='peter_becker-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/peterb-hd.jpg, /img/people/l/peterb-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/peterb-hd.jpg, /img/people/m/peterb-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/peterb-hd.jpg, /img/people/s/peterb-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/peterb-hd.jpg, /img/people/xs/peterb-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=peterBecker.getImage('image-l').url + ', ' + peterBecker.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=peterBecker.getImage('image-m').url + ', ' + peterBecker.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=peterBecker.getImage('image-s').url + ', ' + peterBecker.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=peterBecker.getImage('image-xs').url + ', ' + peterBecker.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
                     //if IE 9
-                    img.img-responsive(src='/img/peterb-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=peterBecker.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                 .row.crew-detail-xs.hidden-sm.peter_becker-xs
                   .col-xs-10.col-xs-offset-1
-                    a(href='http://futuremandigital.com/#peter_becker-xs')
+                    a(href='#peter_becker-xs')
                     a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='peter_becker-xs')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line.left(x1='10', y1='25', x2='40', y2='25')
                         line.right(x1='10', y1='25', x2='40', y2='25')
-                    h4.name
-                      | Peter
-                      span.red +
-                      |  Becker
-                    p.item.title
-                      span.red +
-                      |  Vice President
-                    p.item
-                      span.red +
-                      |  Family First
-                    p.item
-                      span.red +
-                      |  "Crab Cakes and Football"
-                    p.item
-                      span.red +
-                      |  OBX
-                    p.item
-                      span.red +
-                      |  Project Management and Delivery
-                    .content
-                      p
-                        | A veteran of digital, Peter is the resident account and project management director at Futureman. He spearheads the agency's client services and operations. His experience in agency-side solutions delivery, client-side marketing, production, graphic design, media, manufacturing, and team leadership allow him to precisely service Futureman's diverse client roster, and his attention to detail ensures agency projects are delivered flawlessly, on time and on budget.
-                      p
-                        | A glutton for challenges, Mid-Atlantic seafood, horror films, the Rolling Stones, and Baltimore sports, Peter has spent the past 4+ years refining the business' operations model to employ best practices across every agency discipline and in doing so, has helped catapult the business forward. Each and every day he works hand in hand with clients to deliver high-caliber projects and keep the company's moniker of the preferred or "go to" agency for countless clients and agency partners, in tact.
+                    h4.name 
+                      != peterBecker.getText('firstName')
+                      span.red + 
+                      != peterBecker.getText('lastName')
+                    != peterBecker.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                    
                 .col-xs-12.col-sm-6
                   .row
                     .crew.hidden-xs.col-sm-12.justin_edwards-pic(data-name='justin_edwards')
-                      h4 Justin Edwards
+                      h4 !{justinEdwards.getText('firstName')} !{justinEdwards.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.justin_edwards-xs-image(data-name='justin_edwards-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/justin-hd.jpg, /img/people/l/justin-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/justin-hd.jpg, /img/people/m/justin-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/justin-hd.jpg, /img/people/s/justin-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/justin-hd.jpg, /img/people/xs/justin-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=justinEdwards.getImage('image-l').url + ', ' + justinEdwards.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=justinEdwards.getImage('image-m').url + ', ' + justinEdwards.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=justinEdwards.getImage('image-s').url + ', ' + justinEdwards.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=justinEdwards.getImage('image-xs').url + ', ' + justinEdwards.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
                     //if IE 9
-                    img.img-responsive(src='/img/justin-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=justinEdwards.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                 .row.crew-detail-xs.hidden-sm.justin_edwards-xs
                   .col-xs-10.col-xs-offset-1
-                    a(href='http://futuremandigital.com/#justin_edwards-xs')
+                    a(href='#justin_edwards-xs')
                     a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='justin_edwards-xs')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line.left(x1='10', y1='25', x2='40', y2='25')
                         line.right(x1='10', y1='25', x2='40', y2='25')
-                    h4.name
-                      | Justin
-                      span.red +
-                      |  Edwards
-                    p.item.title
-                      span.red +
-                      |  Creative Astronaut
-                    p.item
-                      span.red +
-                      |  Skateboarder
-                    p.item
-                      span.red +
-                      |  Picture-taker
-                    p.item
-                      span.red +
-                      |  “Downtown Wigwam”
-                    .content
-                      p
-                        | Justin is a lifelong film maker and award-winning editor. There is not much you can say about Justin other than that he has a gift for storytelling. He has shot and edited films and videos for FOX Twentieth Television, Red Bull, Gatorade, NFL, Special K, Coors Light, Nike, and countless others. He also likes to take pictures and skateboard.
+                    h4.name 
+                      != justinEdwards.getText('firstName')
+                      span.red + 
+                      != justinEdwards.getText('lastName')
+                    != justinEdwards.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                    
                 .col-xs-12.col-sm-6
                   .row
                     .crew.hidden-xs.col-sm-12.dillon_barenbrugge-pic(data-name='dillon_barenbrugge')
-                      h4 Dillon Barenbrugge
+                      h4 !{dillonBarenbrugge.getText('firstName')} !{dillonBarenbrugge.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.dillon_barenbrugge-xs-image(data-name='dillon_barenbrugge-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/dillon-hd.jpg, /img/people/l/dillon-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/dillon-hd.jpg, /img/people/m/dillon-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/dillon-hd.jpg, /img/people/s/dillon-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/dillon-hd.jpg, /img/people/xs/dillon-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=dillonBarenbrugge.getImage('image-l').url + ', ' + dillonBarenbrugge.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=dillonBarenbrugge.getImage('image-m').url + ', ' + dillonBarenbrugge.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=dillonBarenbrugge.getImage('image-s').url + ', ' + dillonBarenbrugge.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=dillonBarenbrugge.getImage('image-xs').url + ', ' + dillonBarenbrugge.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
                     //if IE 9
-                    img.img-responsive(src='/img/dillon-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=dillonBarenbrugge.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                 .row.crew-detail-xs.hidden-sm.dillon_barenbrugge-xs
                   .col-xs-10.col-xs-offset-1
-                    a(href='http://futuremandigital.com/#dillon_barenbrugge-xs')
+                    a(href='#dillon_barenbrugge-xs')
                     a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='dillon_barenbrugge-xs')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line.left(x1='10', y1='25', x2='40', y2='25')
                         line.right(x1='10', y1='25', x2='40', y2='25')
-                    h4.name
-                      | Dillon
-                      span.red +
-                      |  Barenbrugge
-                    p.item.title
-                      span.red +
-                      |  Designer + Developer
-                    p.item
-                      span.red +
-                      |  Photography
-                    p.item
-                      span.red +
-                      |  Whiskey Aficionado
-                    p.item
-                      span.red +
-                      |  Hip-Hop Enthusiast
-                    .content
-                      p
-                        | Dillon is the latest addition to the Futureman team. Growing up, Dillon always had an interest in drawing, and in high school he was introduced to the digital arts. He went on to double major in Arts Technology and Graphic Design at Illinois State University. With design as his primary focus, he was then introduced to web development during an internship at ISU. With a combined 8 years experience in design and front end development, he now pushes himself to enhance the creative experience online through the use of good design.
+                    h4.name 
+                      != dillonBarenbrugge.getText('firstName')
+                      span.red + 
+                      != dillonBarenbrugge.getText('lastName')
+                    != dillonBarenbrugge.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                    
                 .col-xs-12.col-sm-5
                   .row
                     .crew.hidden-xs.col-sm-12.peter_hongisto-pic(data-name='peter_hongisto')
-                      h4 Peter Hongisto
+                      h4 !{peterHongisto.getText('firstName')} !{peterHongisto.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.peter_hongisto-xs-image(data-name='peter_hongisto-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/peterh-hd.jpg, /img/people/l/peterh-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/peterh-hd.jpg, /img/people/m/peterh-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/peterh-hd.jpg, /img/people/s/peterh-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/peterh-hd.jpg, /img/people/xs/peterh-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=peterHongisto.getImage('image-l').url + ', ' + peterHongisto.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=peterHongisto.getImage('image-m').url + ', ' + peterHongisto.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=peterHongisto.getImage('image-s').url + ', ' + peterHongisto.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=peterHongisto.getImage('image-xs').url + ', ' + peterHongisto.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
                     //if IE 9
-                    img.img-responsive(src='/img/peterh-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=peterHongisto.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                 .row.crew-detail-xs.hidden-sm.peter_hongisto-xs
                   .col-xs-10.col-xs-offset-1
-                    a(href='http://futuremandigital.com/#peter_hongisto-xs')
+                    a(href='#peter_hongisto-xs')
                     a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='peter_hongisto-xs')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line.left(x1='10', y1='25', x2='40', y2='25')
                         line.right(x1='10', y1='25', x2='40', y2='25')
-                    h4.name
-                      | Peter
-                      span.red +
-                      |  Hongisto
-                    p.item.title
-                      span.red +
-                      |  Editor
-                    p.item
-                      span.red +
-                      |  Digital Film Maker
-                    p.item
-                      span.red +
-                      |  Remarkably Quiet
-                    p.item
-                      span.red +
-                      |  Cookie Lover
-                    .content
-                      p
-                        | Hailing from the corn fields of western Illinois, Peter is a video editor and independent filmmaker. He has been crafting videos since he could hold a camera. He is an alum of DePaul University’s Digital Cinema program and a veteran of both production and post-production.
-                      p
-                        | Peter is a member of the Futureman Video Team, creating informative and entertaining videos for a wide breadth of clientele. He is eager and tireless, always striving to get “the shot.” He also really does like cookies as much as his profile suggests.
+                    h4.name 
+                      != peterHongisto.getText('firstName')
+                      span.red + 
+                      != peterHongisto.getText('lastName')
+                    != peterHongisto.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                    
                 .col-xs-12.col-sm-7
                   .row
                     .crew.hidden-xs.col-sm-12.kevin_o_reilly-pic(data-name='kevin_o_reilly')
-                      h4 Kevin O'Reilly
+                      h4 !{kevinOreilly.getText('firstName')} !{kevinOreilly.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.kevin_o_reilly-xs-image(data-name='kevin_o_reilly-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/kevin-hd.jpg, /img/people/l/kevin-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/kevin-hd.jpg, /img/people/m/kevin-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/kevin-hd.jpg, /img/people/s/kevin-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/kevin-hd.jpg, /img/people/xs/kevin-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=kevinOreilly.getImage('image-l').url + ', ' + kevinOreilly.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=kevinOreilly.getImage('image-m').url + ', ' + kevinOreilly.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=kevinOreilly.getImage('image-s').url + ', ' + kevinOreilly.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=kevinOreilly.getImage('image-xs').url + ', ' + kevinOreilly.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
                     //if IE 9
-                    img.img-responsive(src='/img/kevin-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=kevinOreilly.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                 .row.crew-detail-xs.hidden-sm.kevin_o_reilly-xs
                   .col-xs-10.col-xs-offset-1
-                    a(href='http://futuremandigital.com/#kevin_o_reilly-xs')
+                    a(href='#kevin_o_reilly-xs')
                     a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='kevin_o_reilly-xs')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line.left(x1='10', y1='25', x2='40', y2='25')
                         line.right(x1='10', y1='25', x2='40', y2='25')
-                    h4.name
-                      | Kevin
-                      span.red +
-                      |  O'Reilly
-                    p.item.title
-                      span.red +
-                      |  Producer
-                    p.item
-                      span.red +
-                      |  Office Role: Older looking happy guy
-                    p.item
-                      span.red +
-                      |  First job: Caddy from age 9 until 22
-                    p.item
-                      span.red +
-                      |  Favorite hobby: Woodworking
-                    .content
-                      p
-                        | Kevin O’Reilly joined the Futureman team in early 2014. O’Reilly was the president and founder of Buildings On Demand. Spending over a decade in the commercial real estate industry, O’Reilly saw an opportunity to change the way office buildings were being marketed. He began by creating story telling video productions for the purposes of marketing commercial office buildings and their spaces. Working with the Futureman team from the beginning, the two businesses eventually formed the joint venture agency, BOD Creative. BOD Creative offers Futureman’s full range of creative services with a primary focus of providing web design/development and video production to the commercial real estate industry. Throughout his commercial real estate career, O’Reilly worked as a trusted advisor to the senior management of many different business types, consulting on both the financial and cultural aspects of their operations. His past experiences translate well into serving the various needs of Futureman’s clients.
-                      p
-                        | For over eight years O’Reilly was a volunteer and Associate Board Member with Jobs for Youth Chicago. In 2009, O’Reilly raised significant funds for the Leukemia and Lymphoma Society as a candidate in their annual competition, Man of the Year. In 2013, O’Reilly was a student at The Starter League focusing on web development. O’Reilly is a graduate of Ohio University.
+                    h4.name 
+                      != kevinOreilly.getText('firstName')
+                      span.red + 
+                      != kevinOreilly.getText('lastName')
+                    != kevinOreilly.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                    
                 .col-xs-12.col-sm-6
                   .row
                     .crew.hidden-xs.col-sm-12.conrad_fuhrman-pic(data-name='conrad_fuhrman')
-                      h4 Conrad Fuhrman
+                      h4 !{conradFuhrman.getText('firstName')} !{conradFuhrman.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.conrad_fuhrman-xs-image(data-name='conrad_fuhrman-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/conrad-hd.jpg, /img/people/l/conrad-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/conrad-hd.jpg, /img/people/m/conrad-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/conrad-hd.jpg, /img/people/s/conrad-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/conrad-hd.jpg, /img/people/xs/conrad-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=conradFuhrman.getImage('image-l').url + ', ' + conradFuhrman.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=conradFuhrman.getImage('image-m').url + ', ' + conradFuhrman.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=conradFuhrman.getImage('image-s').url + ', ' + conradFuhrman.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=conradFuhrman.getImage('image-xs').url + ', ' + conradFuhrman.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
                     //if IE 9
-                    img.img-responsive(src='/img/conrad-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=conradFuhrman.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                 .row.crew-detail-xs.hidden-sm.conrad_fuhrman-xs
                   .col-xs-10.col-xs-offset-1
-                    a(href='http://futuremandigital.com/#conrad_fuhrman-xs')
+                    a(href='#conrad_fuhrman-xs')
                     a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='conrad_fuhrman-xs')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line.left(x1='10', y1='25', x2='40', y2='25')
                         line.right(x1='10', y1='25', x2='40', y2='25')
-                    h4.name
-                      | Conrad
-                      span.red +
-                      |  Fuhrman
-                    p.item.title
-                      span.red +
-                      |  Chief Technology Officer
-                    p.item
-                      span.red +
-                      |  Brewing
-                    p.item
-                      span.red +
-                      |  Audiophile
-                    p.item
-                      span.red +
-                      |  Laravel
-                    .content
-                      p
-                        | With over 15 years in digital and design, Conrad has worked with brands such as Ernst & Young, McDonald's, Nike, P&G, CIBA Vision, James Hardie and more. He studied design and animation at the Illinois Institute of Art, harnessing his passion for creative and translating it to UI, UX, and development. Conrad also was part of Excelerate Labs, a Chicago incubator now part of TechStars, and co-founded MakeItFor.Us, a marketplace where anything can be made.
-                      p
-                        | Conrad brings to Futureman a critical skill set and expertise that encapsulates design, UX, and development. This hybrid offering enables him to scope, design, and deliver projects with a powerful and unmatched POV.
-                      p
-                        | When he's not at Futureman, Conrad loves listening to vinyl and is currently building a custom 6v6 tube preamp. He also serves on the board of CHAOS Brew Club where he brews beer. Drinking the beer he makes is also an enjoyment of his. If you're fortunate enough to stop by the office, you might get a chance to have some of the beer he brews on tap.
+                    h4.name 
+                      != conradFuhrman.getText('firstName')
+                      span.red + 
+                      != conradFuhrman.getText('lastName')
+                    != conradFuhrman.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                    
                 .col-xs-12.col-sm-6
                   .row
                     .crew.hidden-xs.col-sm-12.nolan_marketti-pic(data-name='nolan_marketti')
-                      h4 Nolan Marketti
+                      h4 !{nolanMarketti.getText('firstName')} !{nolanMarketti.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.nolan_marketti-xs-image(data-name='nolan_marketti-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/nolan-hd.jpg, /img/people/l/nolan-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/nolan-hd.jpg, /img/people/m/nolan-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/nolan-hd.jpg, /img/people/s/nolan-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/nolan-hd.jpg, /img/people/xs/nolan-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=nolanMarketti.getImage('image-l').url + ', ' + nolanMarketti.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=nolanMarketti.getImage('image-m').url + ', ' + nolanMarketti.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=nolanMarketti.getImage('image-s').url + ', ' + nolanMarketti.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=nolanMarketti.getImage('image-xs').url + ', ' + nolanMarketti.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
                     //if IE 9
-                    img.img-responsive(src='/img/nolan-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=nolanMarketti.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                 .row.crew-detail-xs.hidden-sm.nolan_marketti-xs
                   .col-xs-10.col-xs-offset-1
-                    a(href='http://futuremandigital.com/#nolan_marketti-xs')
+                    a(href='#nolan_marketti-xs')
                     a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='nolan_marketti-xs')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line.left(x1='10', y1='25', x2='40', y2='25')
                         line.right(x1='10', y1='25', x2='40', y2='25')
-                    h4.name
-                      | Nolan
-                      span.red +
-                      |  Marketti
-                    p.item.title
-                      span.red +
-                      |  Senior Designer
-                    p.item
-                      span.red +
-                      |  Master Chef
-                    p.item
-                      span.red +
-                      |  Outdoor Enthusiast
-                    p.item
-                      span.red +
-                      |  NHL
-                    .content
-                      p
-                        | Nolan crafts visual stories through design. From the “glove state”, he  set his roots here in Chicago and received his Bachelor of Fine Arts at The Illinois Institute of Art - Chicago.
-                      p
-                        | With experience in print, packaging and web, his versatile skill set translates into all aspects of design. He is diligent, thought-provoking and always brings a unique, different perspective to the table. He’s a lover of type, the grid and Helvetica. He can also defend the most widely hated typeface Comic Sans.
+                    h4.name 
+                      != nolanMarketti.getText('firstName')
+                      span.red + 
+                      != nolanMarketti.getText('lastName')
+                    != nolanMarketti.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                    
                 .col-xs-12.col-sm-7
                   .row
                     .crew.hidden-xs.col-sm-12.jackie_bender-pic(data-name='jackie_bender')
-                      h4 Jackie Bender
+                      h4 !{jackieBender.getText('firstName')} !{jackieBender.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.jackie_bender-xs-image(data-name='jackie_bender-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/jackie-hd.jpg, /img/people/l/jackie-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/jackie-hd.jpg, /img/people/m/jackie-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/jackie-hd.jpg, /img/people/s/jackie-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/jackie-hd.jpg, /img/people/xs/jackie-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=jackieBender.getImage('image-l').url + ', ' + jackieBender.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=jackieBender.getImage('image-m').url + ', ' + jackieBender.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=jackieBender.getImage('image-s').url + ', ' + jackieBender.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=jackieBender.getImage('image-xs').url + ', ' + jackieBender.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
                     //if IE 9
-                    img.img-responsive(src='/img/jackie-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=jackieBender.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                 .row.crew-detail-xs.hidden-sm.jackie_bender-xs
                   .col-xs-10.col-xs-offset-1
-                    a(href='http://futuremandigital.com/#jackie_bender-xs')
+                    a(href='#jackie_bender-xs')
                     a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='jackie_bender-xs')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line.left(x1='10', y1='25', x2='40', y2='25')
                         line.right(x1='10', y1='25', x2='40', y2='25')
-                    h4.name
-                      | Jackie
-                      span.red +
-                      |  Bender
-                    p.item.title
-                      span.red +
-                      |  Producer & Copy Writer
-                    p.item
-                      span.red +
-                      |  Champagne enthusiast
-                    p.item
-                      span.red +
-                      |  Second coming of Mozart on piano
-                    p.item
-                      span.red +
-                      |  Spirit shape: squiggle
-                    .content
-                      p
-                        | Jackie is an on-camera host & producer who specializes in news, entertainment and fashion for TV, web, and print. She hosts and writes FOX’s “Celebrity Relationship Index” for Futureman, and has produced for ABC Network News, Good Morning America, World News Tonight and Nightline. She’s hosted segments for TODAY.com, ABC Eyewitness News, Fox’s Good Day Chicago, ABC’s Windy City LIVE, Chicago's WGN-TV, and the NESN. As an entertainment host and producer for Tribune Broadcasting, her work syndicated across Tribune's 43 stations nationwide, AOL, and Huffington Post, generating over 25 million views. She also hosts and produces a health series called “Fit & Well” for the ContextMedia Health Network which syndicates in medical practices across all 50 states with a reach of 121M.
-                      p
-                        | She loves international travel, yoga, fashion, family, being a newlywed, cooking, and her job. She counts Sarah Jessica Parker, Sheryl Crow, and Gwyneth Paltrow among her favorite interview subjects so far.
+                    h4.name 
+                      != jackieBender.getText('firstName')
+                      span.red + 
+                      != jackieBender.getText('lastName')
+                    != jackieBender.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                    
                 .col-xs-12.col-sm-5
                   .row
                     .crew.hidden-xs.col-sm-12.scott_porembski-pic(data-name='scott_porembski')
-                      h4 Scott Porembski
+                      h4 !{scottPorembski.getText('firstName')} !{scottPorembski.getText('lastName')}
                       svg.line(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line(x1='2', y1='0', x2='2', y2='80')
                     .crew-xs.visible-xs-block.col-xs-12.scott_porembski-xs-image(data-name='scott_porembski-xs')
                   picture
                     //if IE 9
                       video(style='display: none;')
-                    source(srcset='/img/people/l/scott-hd.jpg, /img/people/l/scott-hd.jpg 2x', media='(min-width: 1200px)')
-                    source(srcset='/img/people/m/scott-hd.jpg, /img/people/m/scott-hd.jpg 2x', media='(min-width: 992px)')
-                    source(srcset='/img/people/s/scott-hd.jpg, /img/people/s/scott-hd.jpg 2x', media='(min-width:  768px)')
-                    source(srcset='/img/people/xs/scott-hd.jpg, /img/people/xs/scott-hd.jpg 2x', media='(max-width: 767px)')
+                    source(srcset=scottPorembski.getImage('image-l').url + ', ' + scottPorembski.getImage('image-l').url + ' 2x', media='(min-width: 1200px)')
+                    source(srcset=scottPorembski.getImage('image-m').url + ', ' + scottPorembski.getImage('image-m').url + ' 2x', media='(min-width: 992px)')
+                    source(srcset=scottPorembski.getImage('image-s').url + ', ' + scottPorembski.getImage('image-s').url + ' 2x', media='(min-width:  768px)')
+                    source(srcset=scottPorembski.getImage('image-xs').url + ', ' + scottPorembski.getImage('image-xs').url + ' 2x', media='(max-width: 767px)')
                     //if IE 9
-                    img.img-responsive(src='/img/scott-hd.jpg', style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
+                    img.img-responsive(src=scottPorembski.getImage('image-l').url, style='border-bottom: 1px solid white; width: 100%;', srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
                 .row.crew-detail-xs.hidden-sm.scott_porembski-xs
                   .col-xs-10.col-xs-offset-1
-                    a(href='http://futuremandigital.com/#scott_porembski-xs')
+                    a(href='#scott_porembski-xs')
                     a.crew-close.close-xs(href='http://futuremandigital.com/#', data-name='scott_porembski-xs')
                       | CLOSE
                       svg.close-line(height='100%', width='100%', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                         line.left(x1='10', y1='25', x2='40', y2='25')
                         line.right(x1='10', y1='25', x2='40', y2='25')
-                    h4.name
-                      | Scott
-                      span.red +
-                      |  Porembski
-                    p.item.title
-                      span.red +
-                      |  Illustrator
-                    p.item
-                      span.red +
-                      |  Illustrator
-                    p.item
-                      span.red +
-                      |  Coffee addict
-                    p.item
-                      span.red +
-                      |  Keyboard player
-                    .content
-                      p
-                        | Forged in the fires of higher learning at the Illinois Institute of Art. A native of Chicagoland himself, Scott Porembski ruthlessly pursues his passion for the visual arts and storytelling. From his long background as a freelancer, Scott relishes creating in diverse digital mediums ranging from illustration, animation and film, concept art, and design to best suit each and every individual client's needs. Currently living internationally with his wife and two children in Japan, he spends his downtime composing music on the piano or doing his best not to make people feel uncomfortable while he sketches and paints in public spaces. His greatest pain and sorrow can be traced to the entire lack of Chicago style food where he resides. Seriously, no one even knows what a pizza puff is.
+                    h4.name 
+                      != scottPorembski.getText('firstName')
+                      span.red + 
+                      != scottPorembski.getText('lastName')
+                    != scottPorembski.getStructuredText('profileText').asHtml(ctx.linkResolver)
+                    
                   
                   
     footer.footer

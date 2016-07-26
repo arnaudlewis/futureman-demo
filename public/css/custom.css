@@ -16,3 +16,60 @@
   left: 50%;
   transform: translate3d(-50%, -50%, 0)
 }
+
+
+.crew-detail ul, .crew-detail-xs ul{
+  padding-left: 0;
+  list-style: none;
+  text-transform: uppercase;
+  font-family: "Avenir Next W01";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 24px;
+  margin: 20px 0 40px;
+}
+
+.crew-detail ul strong, .crew-detail-xs ul strong {
+  font-family: "Futura PT Multilingual W01";
+  font-weight: 600;
+  font-style: italic;
+}
+
+.crew-detail-xs ul {
+  font-size: 10px;
+  line-height: 18px;
+  margin: 0 0 20px;
+}
+
+
+.crew-detail p {
+  font-family: "Avenir Next W01";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 40px;
+  padding-right: 300px;
+}
+
+.crew-detail-xs p {
+  font-family: "Avenir Next W01";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 20px;
+}
+
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .crew-detail p {
+    padding-right: 200px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .crew-detail p {
+    padding-right: 80px;
+  }
+}
