@@ -25,7 +25,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // -- Links resolution rules
 // This function will be used to generate links to Prismic.io documents
 // As your project grows, you should update this function according to your routes
-function linkResolver(doc, ctx) {
+function linkResolver(doc) {
   if (doc.uid === 'home') return _Router2.default.index;else return _Router2.default.notFound;
 }
 
@@ -50,7 +50,7 @@ function preview(req, res) {
   var previewToken = req.query['token'];
   api(req, res).then(function (api) {
     api.previewSession(previewToken, linkResolver, '/', function (err, redirectUrl) {
-      res.cookie(_prismic2.default.previewCookie, previewToken, { maxAge: 60 * 30, path: '/', httpOnly: false });
+      res.cookie(_prismic2.default.previewCookie, previewToken, { maxAge: 60 * 30 * 1000, path: '/', httpOnly: false }); //30min
       res.redirect(redirectUrl);
     });
   }).catch(function (err) {
