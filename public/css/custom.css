@@ -17,6 +17,10 @@
   transform: translate3d(-50%, -50%, 0)
 }
 
+.content-2 h3 strong, .content-3 h3 strong {
+  font-weight: inherit;
+  color: #ff0000;
+}
 
 .crew-detail ul, .crew-detail-xs ul{
   padding-left: 0;

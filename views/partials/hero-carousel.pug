@@ -32,11 +32,15 @@ section.hero
             .headline(class='item_'+slideCount + " " + slideCountText + " " + hiddenClass)
               p !{slide.getText('subTitle')}
               h3 !{slide.getText('title')}
-              a(href=slide.getLink('link').url(ctx.linkResolver))
+              
+              - var linkURL = "#"
+              if slide.getLink('link') != null
+                - linkURL = slide.getLink('link').url(ctx.linkResolver)
+              a(href=linkURL)
                 img(src='/img/home/cta-arrow.png', height='12')
                 |  !{slide.getText('linkText')}
-
-
+              
+              
             - slideCount++
 
 
