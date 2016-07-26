@@ -21,7 +21,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = {
   index: function index(req, res) {
     _Prismic2.default.api(req, res).then(function (api) {
-      api.getByUID('home', 'home').then(function (doc) {
+      api.getByUID('home', 'home', { 'fetchLinks': 'svg.svg' }).then(function (doc) {
         return res.render('index', { 'doc': doc });
       }).catch(function (err) {
         return res.redirect(_Router2.default.notFound);

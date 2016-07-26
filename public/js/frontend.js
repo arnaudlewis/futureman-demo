@@ -507,7 +507,7 @@ $(document).ready(function() {
 
     //Adjust the elevator height for a resize (also in the resize function)
     $('.elevator').css('height', win_height);
-  
+
     //Add bullets for crew detail profiles
     $('.crew-detail ul li, .crew-detail-xs ul li').prepend( "<span class='red'>+ </span>" );
 
@@ -881,9 +881,9 @@ $(document).ready(function() {
             "align": "centerXY",
             "width": 1280,
             "height": 720,
-            "path": "http://futuremandigital.com/assets/media/",
-            "filename": "elevator",
-            "types": ["mp4", "ogg", "webm"]
+            "path": "https://prismic-io.s3.amazonaws.com/",
+            "filename": "futureman-demo%2Fb9e9f04f-5d42-4b62-873c-71c199bfbc26_elevator",
+            "types": ["mp4"]
         });
     } else {
         $('#elevator').addClass('no-video');
